@@ -1,0 +1,196 @@
+{
+"Protein" : {
+  "Chicken" : {
+    "Chicken Fried Rice" : true,
+    "Baked Chicken" : true,
+    "Cream of Mushroom Chicken" : true,
+    "Chicken Chow Mein" : true,
+    "Chicken Teriyaki" : true,
+    "Chicken Wings" : true
+  },
+  "Beef" : {
+    "Grilled Beef Steak" : true,
+    "Roast Beef Sandwich" : true,
+    "Beef Noodle Soup" : true,
+    "Beef Teriyaki" : true,
+    "Beef and Broccoli" : true
+  },
+  "Tofu" : {
+    "Tofu Stir-Fry" : true,
+    "Tofu Hot Pot" : true,
+    "Buddhist Feast" : true,
+    "Tofu on Rice with Soy Sauce" : true
+  },
+  "Seafood" : {
+    "Dill Baked Fish" : true,
+    "Fish and Chips" : true,
+    "Calamari" : true,
+    "Prawn Tempura" : true
+  }
+},
+"Vegetable" : {
+  "Broccoli" : {
+    "Beef and Broccoli" : true
+  },
+  "Onion" : {
+
+  }
+},
+"Carb Staple" : {
+  "Rice" : {
+
+  },
+  "Noodles" : {
+
+  },
+  "Bread" : {
+
+  },
+  "Potatoes" : {
+
+  }
+},
+"Recipes" : {
+  "Chicken Fried Rice" : {
+    "Ingredients" : {
+      "Chicken" : true,
+      "Rice" : true,
+      "Onion" : true,
+      "Egg" : true
+    },
+    "Picture" : "chickenFriedRice.jpg",
+    "Time" : 15
+  },
+  "Baked Chicken" : {
+    "Ingredients" : {
+      "Chicken" : true,
+      "Flour" : true,
+      "Egg" : true
+    },
+    "Picture" : "bakedChicken.jpg",
+    "Time" : 25
+  },
+  "Cream of Mushroom Chicken" : {
+    "Ingredients" : {
+      "Chicken" : true,
+      "Flour" : true,
+      "Mushroom" : true
+    },
+    "Picture" : "creamOfMushroomChicken.jpg",
+    "Time" : 30
+  },
+  "Chicken Wings" : {
+    "Ingredients" : {
+      "Chicken" : true,
+      "Flour" : true,
+      "Eggs" : true
+    },
+    "Picture" : "chickenWings.jpg",
+    "Time" : 15
+  },
+  "Grilled Beef Steak" : {
+    "Ingredients" : {
+      "Beef" : true
+    },
+    "Picture" : "grilledBeefSteak.jpg",
+    "Time" : 10
+  },
+  "Roast Beef Sandwich" : {
+    "Ingredients" : {
+      "Beef" : true,
+      "Bread" : true
+    },
+    "Picture" : "roastBeefSandwich.jpg",
+    "Time" : 5
+  },
+  "Beef Noodle Soup" : {
+    "Ingredients" : {
+      "Beef" : true,
+      "Noodles" : true
+    },
+    "Picture" : "beefNoodleSoup.jpg",
+    "Time" : 15
+  },
+  "Beef Teriyaki" : {
+    "Ingredients" : {
+      "Beef" : true,
+      "Teriyaki Sauce" : true,
+      "Rice" : true,
+      "Onions" : true
+    },
+    "Picture" : "beefTeriyaki.jpg",
+    "Time" : 10
+  },
+  "Tofu Veggie Stir-Fry" : {
+    "Ingredients" : {
+      "Tofu" : true,
+      "Vegetables" : true
+    },
+    "Picture" : "tofuVeggieStirFry.jpg",
+    "Time" : 15
+  },
+  "Tofu Hot Pot" : {
+    "Ingredients" : {
+      "Tofu" : true,
+      "Vegetables" : true
+    },
+    "Picture" : "tofuHotPot.jpg",
+    "Time" : 15
+  },
+  "Buddhist Feast" : {
+    "Ingredients" : {
+      "Tofu" : true,
+      "Vegetables" : true,
+      "Mushrooms" : true,
+      "Noodles" : true,
+      "Rice" : true
+    },
+    "Picture" : "buddhistFeast.jpg",
+    "Time" : 15
+  },
+  "Tofu on Rice with Soy Sauce" : {
+    "Ingredients" : {
+      "Tofu" : true,
+      "Rice" : true,
+      "Soy Sauce" : true
+    },
+    "Picture" : "tofuOnRiceWithSoySauce.jpg",
+    "Time" : 5
+  },
+  "Dill Baked Fish" : {
+    "Ingredients" : {
+      "Fish" : true,
+      "Dill" : true
+    },
+    "Picture" : "dillBakedFish.jpg",
+    "Time" : 30
+  },
+  "Fish and Chips" : {
+    "Ingredients" : {
+      "Fish" : true,
+      "Dill" : true
+    },
+    "Picture" : "fishAndChips.jpg",
+    "Time" : 25
+  },
+  "Calamari" : {
+    "Ingredients" : {
+      "Squid" : true,
+      "Flour" : true,
+      "Eggs" : true
+    },
+    "Picture" : "calamari.jpg",
+    "Time" : 10
+  },
+  "Prawn Tempura" : {
+    "Ingredients" : {
+      "Prawn" : true,
+      "Flour" : true,
+      "Eggs" : true,
+      "Panko" : true
+    },
+    "Picture" : "prawnTempura.jpg",
+    "Time" : 10
+  }
+}
+}
