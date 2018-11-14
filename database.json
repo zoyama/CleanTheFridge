@@ -33,21 +33,26 @@
     "Beef and Broccoli" : true
   },
   "Onion" : {
-
+    "Chicken Fried Rice" : true,
+    "Beef Teriyaki" : true,
   }
 },
 "Carb Staple" : {
   "Rice" : {
-
+    "Chicken Fried Rice" : true,
+    "Beef Teriyaki" : true,
+    "Buddhist Feast" : true,
+    "Tofu on Rice with Soy Sauce" : true
   },
   "Noodles" : {
-
+    "Beef Noodle Soup" : true,
+    "Buddhist Feast" : true
   },
   "Bread" : {
-
+    "Roast Beef Sandwich" : true
   },
   "Potatoes" : {
-
+    "Fish and Chips" : true
   }
 },
 "Recipes" : {
@@ -168,7 +173,8 @@
   "Fish and Chips" : {
     "Ingredients" : {
       "Fish" : true,
-      "Dill" : true
+      "Dill" : true,
+      "Potatoes" : true
     },
     "Picture" : "fishAndChips.jpg",
     "Time" : 25
