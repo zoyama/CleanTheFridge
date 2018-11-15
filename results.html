@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title> 
+				Clean the Fridge 
+			</title>
+			<meta charset="UTF-8" />
+
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+			<link rel="shortcut icon" href='./icon.png' type="image/x-icon" />
+
+			<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+			<script>
+			  // Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyDhM-kBAGxR3OtScrkkjglCkIuwXTawiTo",
+			    authDomain: "clean-the-fridge.firebaseapp.com",
+			    databaseURL: "https://clean-the-fridge.firebaseio.com",
+			    projectId: "clean-the-fridge",
+			    storageBucket: "clean-the-fridge.appspot.com",
+			    messagingSenderId: "3842523089"
+			  };
+			  firebase.initializeApp(config);
+			</script>
+
+			<style>
+			a {text-decoration: none;}
+			body {background-color: #ECF4F6;}
+			p {margin-top: 2%;}
+			div {border: 2px solid black;}
+			ul {padding-inline-start: 15px; margin-block-start: 0.5em;}
+
+			header {
+				margin: 0 auto;
+				width: 96.5%;
+				border: 3px solid black;
+				height: 50px;
+				padding-left: 3%;
+				padding-top: 3%;
+				margin-bottom: 4%;
+			}
+
+
+
+			#navbar{
+				background-color: white;
+			}
+
+			#container1 {
+				float: left;
+				width: 18%;
+				height: 800px;
+				border-radius: 10px;
+				margin-right: 1.3%;
+				padding: 2%;
+				background-color: white;
+			}
+
+			#selected {
+				display: inline;
+			}
+
+			.container2 {
+				float: right;
+				width: 76%;
+				height: 75vh;
+				border-radius: 10px;
+				margin-bottom: 3%;
+				background-color: #C5FFFF;
+			}
+
+			.recipetitle {
+				float: left;
+				width: 91.5%;
+				height: 9%;
+				border-radius: 6px;
+				margin-left: 2%;
+    		margin-top: 2%;
+    		clear: right;
+    		padding: 0% 2% 2%;
+    		background-color: white;
+
+			}
+
+			.recipeinfo {
+				border-radius: 10px;
+				width: 24%;
+				height: 65%;
+				float: right;
+				margin-top: 2%;
+				padding: 2%;
+				background-color: white;
+			}
+
+			.ingredients {
+				border-radius: 10px;
+				width: 24%;
+				height: 65%;
+				float: right;
+				margin: 2%;
+				padding: 2%;
+				background-color: white;
+			}
+
+			.image {
+				width: 35%;
+				float:left ;
+				margin-left: 2%;
+				margin-top: 2%;
+				border: 2px solid black;
+				border-radius: 6px;
+			}
+
+			#filter {
+				float:left;
+				width: 20%;
+				height: 300px;
+				border-radius: 10px;
+				margin-right: 3%;
+				clear: left;
+			}
+
+			#scrollbar {
+				float: right;
+				width: 2%;
+				height: 800px;
+				background-color: red;
+			}
+
+			</style>
+		</head>
+		<body>
+			<header id="navbar">
+				Clean the Fridge
+			</header>
+			<div id="container1">
+				<section>
+					<h4 id="selected"> Ingredients: </h4>
+					<ul>
+						<li> Milk </li>
+						<li> Eggs </li>
+						<li> Chicken </li>
+					</ul>
+				</section>
+
+				<section>
+					<h4 id="selected"> Filters </h4>
+					<ul>
+						<li>Serving </li>
+						<li>Difficulty </li>
+						<li>Exclusions</li>
+					</ul>
+				</section>
+			</div>
+
+
+			<div class="container2">
+				<div class="recipetitle">
+					<p> Recipe Title </p>
+				</div>
+				<img class="image" src=./sandwich.jpg alt="recipe1" />
+				<div class="ingredients">
+					<p> Ingredients </p>
+				</div>
+				<div class="recipeinfo">
+					<p> Recipe info </p>
+				</div>
+			</div>
+
+			<div class="container2">
+				<div class="recipetitle">
+					<p> Recipe Title </p>
+				</div>
+				<img class="image" src=./sandwich.jpg alt="recipe1" />
+				<div class="ingredients">
+					<p> Ingredients </p>
+				</div>
+				<div class="recipeinfo">
+					<p> Recipe info </p>
+				</div>
+			</div>
+
+		</body>
+	</html>
