@@ -5,11 +5,10 @@
 				Clean the Fridge 
 			</title>
 			<meta charset="UTF-8" />
-
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 			<link rel="shortcut icon" href='./icon.png' type="image/x-icon" />
-
+			<link rel = "stylesheet" type = "text/css" 
+			href = "./CSS/main.css" />
 			<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 			<script>
 			  // Initialize Firebase
@@ -25,161 +24,150 @@
 			</script>
 
 			<style>
+			@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC');
+
 			a {text-decoration: none;}
-			body {background-color: #ECF4F6;}
-			p {margin-top: 2%;}
-			div {border: 2px solid black;}
-			ul {padding-inline-start: 15px; margin-block-start: 0.5em;}
+			body {background-color: #ECF4F6; font-family: 'Noto Sans SC', sans-serif;}
+			p {margin: 0%; font-size: 0.9em;}
+			body > div {border: 2px solid black;}
+			ul {padding-inline-start: 10px; margin-bottom: 2%;}
+			li {margin-inline-start: 3%; 				padding-left: 2%;}
+			input {position: relative; top: 2px;}
+			section {margin-bottom: 3em;}
 
-			header {
-				margin: 0 auto;
-				width: 96.5%;
-				border: 3px solid black;
-				height: 50px;
-				padding-left: 3%;
-				padding-top: 3%;
-				margin-bottom: 4%;
+			#selected + ul {
+				list-style-type: none;
+				padding-inline-start: 0px;
+				font-size: 0.9em;
 			}
 
-
-
-			#navbar{
-				background-color: white;
+			div + p {
+				margin: 0%;
 			}
 
-			#container1 {
-				float: left;
-				width: 18%;
-				height: 800px;
-				border-radius: 10px;
-				margin-right: 1.3%;
-				padding: 2%;
-				background-color: white;
-			}
-
-			#selected {
-				display: inline;
-			}
-
-			.container2 {
-				float: right;
-				width: 76%;
-				height: 75vh;
-				border-radius: 10px;
-				margin-bottom: 3%;
-				background-color: #C5FFFF;
-			}
-
-			.recipetitle {
-				float: left;
-				width: 91.5%;
-				height: 9%;
-				border-radius: 6px;
-				margin-left: 2%;
-    		margin-top: 2%;
-    		clear: right;
-    		padding: 0% 2% 2%;
+			.ss {
+				border-right: 1px solid;
+    		border-top: 1px solid;
+    		border-left: 1px solid;
+    		border-radius: 4px 4px 0px 0px;
     		background-color: white;
+			}
+
+			.s{
+				border-right: 1px solid;
+    		border-bottom: 1px solid;
+    		border-left: 1px solid;
+			}
+
+			#filters {
 
 			}
 
-			.recipeinfo {
-				border-radius: 10px;
-				width: 24%;
-				height: 65%;
-				float: right;
-				margin-top: 2%;
-				padding: 2%;
+			#s {
 				background-color: white;
-			}
-
-			.ingredients {
-				border-radius: 10px;
-				width: 24%;
-				height: 65%;
-				float: right;
-				margin: 2%;
-				padding: 2%;
-				background-color: white;
-			}
-
-			.image {
-				width: 35%;
-				float:left ;
-				margin-left: 2%;
-				margin-top: 2%;
-				border: 2px solid black;
-				border-radius: 6px;
-			}
-
-			#filter {
-				float:left;
-				width: 20%;
-				height: 300px;
-				border-radius: 10px;
-				margin-right: 3%;
-				clear: left;
-			}
-
-			#scrollbar {
-				float: right;
-				width: 2%;
-				height: 800px;
-				background-color: red;
+				border-radius: 0px 0px 4px 4px;
+				padding: 7%;
+				margin-bottom: 6%;
 			}
 
 			</style>
 		</head>
-		<body>
-			<header id="navbar">
-				Clean the Fridge
-			</header>
-			<div id="container1">
-				<section>
-					<h4 id="selected"> Ingredients: </h4>
-					<ul>
-						<li> Milk </li>
-						<li> Eggs </li>
-						<li> Chicken </li>
-					</ul>
-				</section>
+			<body>
+				<header id="navbar">
+					Clean the Fridge
+				</header>
+				<div id="container1">
+					<section>
+						<h4 id="ingre"> Ingredients: </h4>
+						<ul>
+							<li> Milk </li>
+							<li> Eggs </li>
+							<li> Chicken </li>
+						</ul>
+					</section>
 
-				<section>
-					<h4 id="selected"> Filters </h4>
-					<ul>
-						<li>Serving </li>
-						<li>Difficulty </li>
-						<li>Exclusions</li>
-					</ul>
-				</section>
-			</div>
+					<section>
+						<h4 id="selected"> Filters </h4>
+						<ul id="filters">
+							<li id="ss">Serving &nbsp<button id="show1">+</button></li>
+							<li id="s">1 Serving <input type="checkbox" name="oneServing" value="one"><br>
+							2 ~ 4 Servings <input type="checkbox" name="twoServing" value="two"> <br>
+							>4 Servings <input type="checkbox" name="fourServing" value="four">
+							<li>Difficulty <button id="show2">+</button> </li>
+							<li>Exclusions <button id="show3">+</button> </li>
+						</ul>
+					</section>
+				</div>
 
+				<div class="container2">
+					<div class="recipetitle">
+						<p> Recipe Title </p>
+					</div>
+					<img class="image" src=./sandwich.jpg alt="recipe1" />
+					<div class="ingredients">
+						<p> Ingredients </p>
+					</div>
+					<div class="recipeinfo">
+						<p> Recipe info </p>
+					</div>
+				</div>
 
-			<div class="container2">
-				<div class="recipetitle">
-					<p> Recipe Title </p>
+				<div class="container2">
+					<div class="recipetitle">
+						<p> Recipe Title </p>
+					</div>
+					<img class="image" src=./sandwich.jpg alt="recipe1" />
+					<div class="ingredients">
+						<p> Ingredients </p>
+					</div>
+					<div class="recipeinfo">
+						<p> Recipe info </p>
+					</div>
 				</div>
-				<img class="image" src=./sandwich.jpg alt="recipe1" />
-				<div class="ingredients">
-					<p> Ingredients </p>
-				</div>
-				<div class="recipeinfo">
-					<p> Recipe info </p>
-				</div>
-			</div>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+				</script>
+				<script>
+					$(document).ready(function() {
+						var showFilter = false;
+						$("#s").hide();
+						$("#show1").click(function(event){
+		              if(!showFilter) {
+		                  showFilter = true;
+		                  $("#show1").text("-");
+		                  $("#s").show();
+		                  $("#ss").addClass("ss");
+		                  $("#s").addClass("s");
+		              } else {
+		                  showFilter = false;
+		                  $("#show1").text("+");
+		                  $("#s").hide();
+		                  $("#ss").removeClass("ss");
+		                  $("#s").removeClass("s");
+		              }
+		        });
 
-			<div class="container2">
-				<div class="recipetitle">
-					<p> Recipe Title </p>
-				</div>
-				<img class="image" src=./sandwich.jpg alt="recipe1" />
-				<div class="ingredients">
-					<p> Ingredients </p>
-				</div>
-				<div class="recipeinfo">
-					<p> Recipe info </p>
-				</div>
-			</div>
+		        $("#show2").click(function(event){
+		              if(!showFilter) {
+		                  showFilter = true;
+		                  $("#show2").text("-");
+		                  $("#selected").show();
+		              } else {
+		                  showFilter = false;
+		                  $("#show2").text("+");
+		              }
+		        });
 
+		        $("#show3").click(function(event){
+		              if(!showFilter) {
+		                  showFilter = true;
+		                  $("#show3").text("-");
+		                  $("#selected").show();
+		              } else {
+		                  showFilter = false;
+		                  $("#show3").text("+");
+		              }
+		        });
+		      });			
+				</script>
 		</body>
 	</html>
