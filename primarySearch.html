@@ -1,0 +1,54 @@
+<!-- Batches of Code to be copied into Clean the Fridge webpages -->
+
+<!-- Firebase link -->
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDhM-kBAGxR3OtScrkkjglCkIuwXTawiTo",
+    authDomain: "clean-the-fridge.firebaseapp.com",
+    databaseURL: "https://clean-the-fridge.firebaseio.com",
+    projectId: "clean-the-fridge",
+    storageBucket: "clean-the-fridge.appspot.com",
+    messagingSenderId: "3842523089"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!-- Copy above into head tag -->
+
+
+
+<!-- Primary Search Function -->
+<!-- Assumed button click for input -->
+<!-- Search page output code -->
+<script>
+  // Replace BUTTON.ID with button class name
+  // Or use event listener instead
+  $ ('.BUTTON_ID').click(function() {
+    "value",
+    // Replace BUTTON_NAME with name of button clicked
+    window.location.href = "results.html?"+BUTTON_NAME;
+  });
+</script>
+
+<!-- Results page code for recipe result input-->
+<script>
+  var queryString = decodeURIComponent(window.location.search);
+  queryString = queryString.substring(1);
+  var queries = queryString.split("?");
+
+  var recipeList = queries[1];
+
+  var resultCount = firebase.database().ref(queries[1]).length;
+
+  // resultOutput ID needs to match
+  document.getElementById("resultOutput").innerHTML(resultCount + " results found");
+
+  // Loop for recipe input containers
+  for (var i = 0; i < resultCount; i++) {
+    //Recipe title, ingredients, time
+  }
+
+</script>
