@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Clean the Fridge </title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=KoHo');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,400,400i,500i,600,800,800i,900|Open+Sans');
+		html{
+    height:100%;
+    background: linear-gradient(90deg, purple, rgba(255,150,150,.6) 90%) no-repeat;
+
+}
+	.div-whole {
+		font-family: 'Montserrat';
+		background:linear-gradient(rgba(255,255,255,0) , rgba(0,0,0,.6));
+		height:100%;
+		font-weight: 600;
+
+	}
+	.banner-whole {
+		position:relative;
+		height:160px;
+
+
+	}
+	.space {
+		height:30px;
+	}
+	.banner {
+		text-align:center;
+		position:relative;
+		text-align: center;
+		width:100%;
+		padding: 0px, 0px, 10px, 0px;
+		background-color:rgba(0,0,0,0);
+		margin-top:auto;
+		height:150px;
+	}
+
+	.logo{
+		/**maybe absolute?**/
+		top:0px;
+		left:40px;
+		right:calc(100%-30px);
+
+		position:absolute;
+	}
+	.logo img{
+		width: 70px;
+		height:70px;
+		border-radius:35%;
+	}
+
+	.title-text-contain{
+		width:-1%;
+		/*text will begin at the very beginning
+		so you can change margin top
+		so that it brings the text down
+		to the bottom.*/
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		display: inline;
+				font-color:white;
+		font-size:2em;
+		color:white;
+		left:130px;
+		top:-13px;
+				position:absolute;
+				font-weight:500;
+	}
+	.title-text {
+		letter-spacing: 0px;
+		display: inline;
+
+	}
+	.clean-text {
+		display:inline;
+
+	}
+	.fridge-text {
+		display:inline;
+	}
+
+	.menu-right {
+		width:70px;
+		height: 70px;
+		background: rgba(0, 0, 0, 0);
+		position:relative;
+		float:right;
+			/**top: -30px;
+			right:-60%; **/
+		color:white;
+		border-radius: 10px
+	}
+	.menu-right img{
+		width:70px;
+		height:70px;
+	}
+	.menu-right:hover {
+				background: rgba(255, 255, 255, 0.4);
+	}
+
+	
+	@keyframes darken
+	{
+		0%	{background: rgba(0, 0, 0, 0);}
+
+	    100%   {background: rgba(255, 255, 255, .2);}
+	}
+
+	.content-whole {
+		width:100%;
+	}
+	.content {
+		
+		position:relative;
+
+		text-align: center;
+
+
+	}
+	.add-contain{
+
+		display:flex;
+		padding-top:20px;
+		justify-content: space-around;
+ 
+	}
+
+	.add {
+		top:200px;
+		border-radius: 60px;
+		width:280px;
+				font-weight:bold;
+		height:100px;
+		background-color:rgba(51, 204, 51,0);
+		color:white;
+			font-style: italic;
+
+				display:relative;
+
+
+
+	}
+
+	.add-text {
+		font-size:3em;
+		top:15px;
+		position:relative;
+		display:inline-block;
+	font-weight: bold;
+
+
+	}
+	.add-text:hover {
+
+		font-size:3.1em;
+		top:10px;
+
+
+	}
+
+
+	.ingredient-box-contain{
+		width:80%;
+
+		padding:10px;
+		border:5px solid rgba(0, 0, 0, 0);
+		width:95%;
+		height:50px;
+		display:flex;
+		justify-content: space-evenly;
+	}
+
+	.ingredient-box{
+		border-radius: 6px;
+		width:200px;
+		margin:10px;
+		 box-shadow: 5px 10px black;
+		height:70px;
+		background-color:rgba(0, 0, 129, 0.5	);
+		color:white;
+				display:relative;
+		height:33px;
+
+				border:1px solid rgba(0, 0, 0, 0.5);
+
+			background:rgba(255,255,255,0.2);
+		padding:10px;
+
+	}
+
+	.ingredient-box-text{
+		font-size:1em;
+		display:inline-block;
+	}
+		.ingredient-box:hover {
+					background-color:rgba(255,0, 0, 1	);
+
+		}
+
+		.option-contain{
+
+		display:flex;
+		padding-top:30px;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.option {
+		border-radius: 6px;
+		width:200px;
+		margin:10px;
+		 box-shadow: 5px 10px black;
+		height:70px;
+		background-color:rgba(0, 0, 129, 0.5	);
+		color:white;
+				display:relative;
+
+
+
+	}
+	.option:hover {
+				background-color:rgba(0, 0, 129, 1	);
+
+	}
+
+	.option-text {
+	font-weight: bold;
+		font-size:1.5em;
+		top:15px;
+		position:relative;
+		display:inline-block;
+
+
+	}
+	.option-food-contain{
+		display:flex;
+		width:100%;
+		justify-content:flex-start; 
+	}
+
+	.food-contain{
+		display:flex;
+		width:60%;
+		justify-content: space-around;
+		}
+	.food {
+			border-radius: 6px;
+			width:100px;
+			margin:10px;
+			 box-shadow: 5px 10px white;
+			height:40px;
+			background-color:rgba(0, 199, 129, 0.5	);
+			color:white;
+			display:relative;
+
+
+
+		}
+		.food:hover {
+					background-color:rgba(0, 199, 129, 1	);
+
+		}
+
+		.food-text {
+		font-weight: bold;
+			font-size:1em;
+			top:15px;
+			position:relative;
+			display:inline-block;
+
+
+		}
+	</style>
+</head>
+	<body>
+		<div class="div-whole"> 
+			<!--<div class="space">
+			</div> -->
+			<div class="banner-whole">
+
+				<div class="banner">
+
+					<div class="logo">
+						<img src="logo.jpg" >
+					</div>
+
+								<div class="title-text-contain">
+										<p class="clean-text">
+											Clean
+										</p>
+
+										<p class="title-text">
+											the
+										</p>
+
+										<p class="fridge-text">
+											Fridge
+										</p>
+										
+								</div>
+
+
+						<div class="menu-right">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/VisualEditor_-_Icon_-_Menu.svg/1024px-VisualEditor_-_Icon_-_Menu.svg.png" alt="menu">
+						</div>			
+				</div>	
+		
+			</div>
+		<!-- asdfasdf stuff stuff ends the header end end end-->
+		
+		<!--  asdf -->
+			<div class="content-whole">
+				<div class="content">
+					
+					<div class="add-contain">
+						
+							<div class="add">
+								<div class="add-text">
+								Add +
+								</div>
+							</div> 	
+
+
+						<div class="add">
+							<div class="add-text">
+							Search&#128269;
+
+							</div>
+						</div> 	
+					</div>
+<!---ddddddddddddddd -->
+							
+				<div class="ingredient-box-contain">
+					<div class="ingredient-box">
+						<div class="ingredient-box-text">
+							Apples
+						</div>
+					</div>
+
+					<div class="ingredient-box">
+						<div class="ingredient-box-text">
+							Apples
+						</div>
+					</div>
+
+				
+				</div>
+
+				</div>
+
+
+
+<!-- flex the whole thing insideasdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+					<div class="option-contain">
+						
+
+
+						<div class="option-food-contain">
+
+							<div class = "option">
+								<div class ="option-text">
+									Protein
+								</div>
+							</div>
+							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+					
+					  <div class="food-contain">
+
+						<div class = "food">
+							<div class ="food-text">
+								Chicken
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Beef
+							</div>
+						</div>				
+
+						<div class = "food">
+							<div class ="food-text">
+								Pork
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Peanut
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								tofu
+							</div>
+						</div>	
+																	
+					</div>	
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+						</div>
+
+
+
+						<div class="option-food-contain">
+							<div class = "option">
+								<div class ="option-text">
+									Grains
+								</div>
+							</div>		
+
+
+
+							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+					
+					  <div class="food-contain">
+
+						<div class = "food">
+							<div class ="food-text">
+								Flour
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Bread
+							</div>
+						</div>				
+
+						<div class = "food">
+							<div class ="food-text">
+								Wheat
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Seeds
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Grains
+							</div>
+						</div>	
+																	
+					</div>	
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+
+
+
+						</div>
+
+
+
+						<div class="option-food-contain">
+							<div class = "option">
+								<div class ="option-text">
+									Dairy
+								</div>
+							</div>
+
+
+							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+					
+					  <div class="food-contain">
+
+						<div class = "food">
+							<div class ="food-text">
+								Cheese
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Milk
+							</div>
+						</div>				
+
+						<div class = "food">
+							<div class ="food-text">
+								Yogurt
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Swiss
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Dairy
+							</div>
+						</div>	
+																	
+					</div>	
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+
+
+						</div>
+
+
+
+						<div class="option-food-contain">
+							<div class = "option">
+								<div class ="option-text">
+									Fats & Sugars
+								</div>
+							</div>
+
+
+
+							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+					
+					  <div class="food-contain">
+
+						<div class = "food">
+							<div class ="food-text">
+								Cola
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Jam
+							</div>
+						</div>				
+
+						<div class = "food">
+							<div class ="food-text">
+								Lard
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Caramel
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Buttery
+							</div>
+						</div>	
+																	
+					</div>	
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+						</div>	
+
+
+
+						<div class="option-food-contain">
+							<div class = "option">
+								<div class ="option-text">
+									Fruits & Veggies
+								</div>
+							</div>		
+
+
+							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+					
+					  <div class="food-contain">
+
+						<div class = "food">
+							<div class ="food-text">
+								Broccoli
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Apple
+							</div>
+						</div>				
+
+						<div class = "food">
+							<div class ="food-text">
+								Orange
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Mango
+							</div>
+						</div>
+
+						<div class = "food">
+							<div class ="food-text">
+								Peach
+							</div>
+						</div>	
+																	
+					</div>	
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+						</div>
+
+
+
+					</div>	
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+					
+					
+<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+
+
+
+				</div>
+	 		 </div>
+	 		</div>
+
+
+
+
+		</div>
+	</body>
+</html>
