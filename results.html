@@ -59,10 +59,6 @@
     		border-left: 1px solid;
 			}
 
-			#filters {
-
-			}
-
 			#s {
 				background-color: white;
 				border-radius: 0px 0px 4px 4px;
@@ -89,7 +85,7 @@
 					<section>
 						<h4 id="selected"> Filters </h4>
 						<ul id="filters">
-							<li id="ss">Serving &nbsp<button id="show1">+</button></li>
+							<li id="ss">Serving &nbsp; <button id="show1">+</button></li>
 							<li id="s">1 Serving <input type="checkbox" name="oneServing" value="one"><br>
 							2 ~ 4 Servings <input type="checkbox" name="twoServing" value="two"> <br>
 							>4 Servings <input type="checkbox" name="fourServing" value="four">
@@ -99,74 +95,84 @@
 					</section>
 				</div>
 
-				<div class="container2">
-					<div class="recipetitle">
-						<p> Recipe Title </p>
-					</div>
-					<img class="image" src=./sandwich.jpg alt="recipe1" />
-					<div class="ingredients">
-						<p> Ingredients </p>
-					</div>
-					<div class="recipeinfo">
-						<p> Recipe info </p>
-					</div>
-				</div>
-
-				<div class="container2">
-					<div class="recipetitle">
-						<p> Recipe Title </p>
-					</div>
-					<img class="image" src=./sandwich.jpg alt="recipe1" />
-					<div class="ingredients">
-						<p> Ingredients </p>
-					</div>
-					<div class="recipeinfo">
-						<p> Recipe info </p>
-					</div>
-				</div>
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 				</script>
 				<script>
 					$(document).ready(function() {
-						var showFilter = false;
-						$("#s").hide();
-						$("#show1").click(function(event){
-		              if(!showFilter) {
-		                  showFilter = true;
-		                  $("#show1").text("-");
-		                  $("#s").show();
-		                  $("#ss").addClass("ss");
-		                  $("#s").addClass("s");
-		              } else {
-		                  showFilter = false;
-		                  $("#show1").text("+");
-		                  $("#s").hide();
-		                  $("#ss").removeClass("ss");
-		                  $("#s").removeClass("s");
-		              }
-		        });
+						var body = $("body");
+						var searchResults = ["Baked Chicken"];
 
-		        $("#show2").click(function(event){
-		              if(!showFilter) {
-		                  showFilter = true;
-		                  $("#show2").text("-");
-		                  $("#selected").show();
-		              } else {
-		                  showFilter = false;
-		                  $("#show2").text("+");
-		              }
-		        });
+						searchResults.forEach(function(element) {
+							var ref = firebase.database().ref("Recipes/"+element);
+								ref.on(
+									"value",
+									function(snap) {
+										/**
+										*
+										*SNAPS
+										*
+										*/
+										var name = snap.val();
+										var ingre = snap.val().Ingredients;
+										var picURL = snap.val().Picture;
+										var time = snap.val().Time;							
 
-		        $("#show3").click(function(event){
-		              if(!showFilter) {
-		                  showFilter = true;
-		                  $("#show3").text("-");
-		                  $("#selected").show();
-		              } else {
-		                  showFilter = false;
-		                  $("#show3").text("+");
-		              }
-		        });
+										/**
+										*
+										*ELEMENTS CREATED
+										*
+										*/
+										var container = $("<div></div>");
+										var box1 = $("<div></div>");
+										var title = $("<p></p>");
+										var img = $("<img src'' alt='image' />");
+
+										var box2 = $("<div></div>");
+
+										var box3 = $("<div></div>");
+										var ingred = $("<p></p>");
+
+
+
+										var info = $("<p></p>")										
+
+										/**
+										*
+										*SNAPS INTO ELEMENTS
+										*
+										*/
+										$(title).text(name);
+										$(ingred).text(ingre);
+										$(img).attr('src', picURL);
+										$(info).text("Step One is...");
+
+
+
+										/**
+										*
+										*CSS CHANGES
+										*
+										*/								
+										$(container).addClass("container2");
+										$(box1).addClass("recipetitle");
+										$(box2).addClass("recipeinfo");
+										$(box3).addClass("ingredients");
+										$(img).addClass("image");
+										/**
+										*APPENDS
+										*
+										*/
+										$(body).append(container);
+										$(container).prepend(box1);
+										$(box1).append(element);
+										$(container).append(img);
+										$(container).append(box2);
+										$(container).append(box3);
+										$(box2).append(info);
+										$(box3).append(ingred);
+								})
+								
+							})		
 		      });			
 				</script>
 		</body>

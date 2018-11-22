@@ -34,7 +34,7 @@ header {
 .container2 {
 	float: right;
 	width: 76%;
-	height: 75vh;
+	height: 85vh;
 	border-radius: 10px;
 	margin-bottom: 3%;
 	background-color: #C5FFFF;
@@ -42,7 +42,7 @@ header {
 
 .recipetitle {
 	float: left;
-	width: 91.5%;
+	width: 92%;
 	height: 9%;
 	border-radius: 6px;
 	margin-left: 2%;
@@ -55,26 +55,28 @@ header {
 
 .recipeinfo {
 	border-radius: 10px;
-	width: 24%;
-	height: 65%;
-	float: right;
+	width: 23%;
+	height: 60%;
+	float: left;
 	margin-top: 2%;
 	padding: 2%;
+	margin-left: 2%;
 	background-color: white;
 }
 
 .ingredients {
 	border-radius: 10px;
-	width: 24%;
-	height: 65%;
+	width: 23%;
+	height: 60%;
 	float: right;
-	margin: 2%;
 	padding: 2%;
+	margin-top: 2%;
+	margin-right: 2%;
 	background-color: white;
 }
 
 .image {
-	width: 35%;
+	width: 38%;
 	float:left ;
 	margin-left: 2%;
 	margin-top: 2%;
