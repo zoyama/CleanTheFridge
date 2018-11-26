@@ -1,0 +1,202 @@
+{
+  "Carb Staple" : {
+    "Bread" : {
+      "Roast Beef Sandwich" : true
+    },
+    "Noodles" : {
+      "Beef Noodle Soup" : true,
+      "Buddhist Feast" : true
+    },
+    "Potatoes" : {
+      "Fish and Chips" : true
+    },
+    "Rice" : {
+      "Beef Teriyaki" : true,
+      "Buddhist Feast" : true,
+      "Chicken Fried Rice" : true,
+      "Tofu on Rice with Soy Sauce" : true
+    }
+  },
+  "Protein" : {
+    "Beef" : {
+      "Beef Noodle Soup" : true,
+      "Beef Teriyaki" : true,
+      "Beef and Broccoli" : true,
+      "Grilled Beef Steak" : true,
+      "Roast Beef Sandwich" : true
+    },
+    "Chicken" : {
+      "Baked Chicken" : true,
+      "Chicken Chow Mein" : true,
+      "Chicken Fried Rice" : true,
+      "Chicken Teriyaki" : true,
+      "Chicken Wings" : true,
+      "Cream of Mushroom Chicken" : true
+    },
+    "Seafood" : {
+      "Calamari" : true,
+      "Dill Baked Fish" : true,
+      "Fish and Chips" : true,
+      "Prawn Tempura" : true
+    },
+    "Tofu" : {
+      "Buddhist Feast" : true,
+      "Tofu Hot Pot" : true,
+      "Tofu Stir-Fry" : true,
+      "Tofu on Rice with Soy Sauce" : true
+    }
+  },
+  "Recipes" : {
+    "Baked Chicken" : {
+      "Ingredients" : {
+        "Chicken" : true,
+        "Egg" : true,
+        "Flour" : true
+      },
+      "Picture" : "https://www.simplyrecipes.com/wp-content/uploads/2008/01/baked-chicken-horizontal-600.jpg",
+      "Time" : 25
+    },
+    "Beef Noodle Soup" : {
+      "Ingredients" : {
+        "Beef" : true,
+        "Noodles" : true
+      },
+      "Picture" : "http://www.52newfoods.com/wp-content/uploads/2015/12/cinnamon-beef-noodle-soup-52-new-foods-challenge-jennifer-tyler-lee-1.jpg",
+      "Time" : 15
+    },
+    "Beef Teriyaki" : {
+      "Ingredients" : {
+        "Beef" : true,
+        "Onions" : true,
+        "Rice" : true,
+        "Teriyaki Sauce" : true
+      },
+      "Picture" : "https://img.taste.com.au/sBwvEcvV/taste/2016/11/teriyaki-beef-85844-1.jpeg",
+      "Time" : 10
+    },
+    "Buddhist Feast" : {
+      "Ingredients" : {
+        "Mushrooms" : true,
+        "Noodles" : true,
+        "Rice" : true,
+        "Tofu" : true,
+        "Vegetables" : true
+      },
+      "Picture" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Boeddha%27s_Delight.jpg/250px-Boeddha%27s_Delight.jpg",
+      "Time" : 15
+    },
+    "Calamari" : {
+      "Ingredients" : {
+        "Eggs" : true,
+        "Flour" : true,
+        "Squid" : true
+      },
+      "Picture" : "https://d3cizcpymoenau.cloudfront.net/images/22212/SFS_fried_calamari_CLR-11.jpg",
+      "Time" : 10
+    },
+    "Chicken Fried Rice" : {
+      "Ingredients" : {
+        "Chicken" : true,
+        "Egg" : true,
+        "Onion" : true,
+        "Rice" : true
+      },
+      "Picture" : "https://images-gmi-pmc.edge-generalmills.com/338f16c8-9f80-4a44-ab22-6a3e9a2efdb2.jpg",
+      "Time" : 15
+    },
+    "Chicken Wings" : {
+      "Ingredients" : {
+        "Chicken" : true,
+        "Eggs" : true,
+        "Flour" : true
+      },
+      "Picture" : "https://www.bradleysmoker.com/wp-content/uploads/2017/03/Smoked-Salt-and-Pepper-Wings-1024x768.jpg",
+      "Time" : 15
+    },
+    "Cream of Mushroom Chicken" : {
+      "Ingredients" : {
+        "Chicken" : true,
+        "Flour" : true,
+        "Mushroom" : true
+      },
+      "Picture" : "https://www.cscassets.com/recipes/wide_cknew/wide_24482.jpg",
+      "Time" : 30
+    },
+    "Dill Baked Fish" : {
+      "Ingredients" : {
+        "Dill" : true,
+        "Fish" : true
+      },
+      "Picture" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsBmMJmHVPv5ru9qDIYXfvFpD2hEFhTK9_lCr1Q179kbCjT_eiVg",
+      "Time" : 30
+    },
+    "Fish and Chips" : {
+      "Ingredients" : {
+        "Dill" : true,
+        "Fish" : true,
+        "Potatoes" : true
+      },
+      "Picture" : "https://img.taste.com.au/_dl1tFcJ/taste/2016/11/crispy-fish-and-chips-with-radish-and-coleslaw-23134-1.jpeg",
+      "Time" : 25
+    },
+    "Grilled Beef Steak" : {
+      "Ingredients" : {
+        "Beef" : true
+      },
+      "Picture" : "https://images-gmi-pmc.edge-generalmills.com/b57ee35f-bce2-4229-8bf5-19b97876a4cb.jpg",
+      "Time" : 10
+    },
+    "Prawn Tempura" : {
+      "Ingredients" : {
+        "Eggs" : true,
+        "Flour" : true,
+        "Panko" : true,
+        "Prawn" : true
+      },
+      "Picture" : "https://www.ndtv.com/cooks/images/japanese.prawn.tempura.jpg",
+      "Time" : 10
+    },
+    "Roast Beef Sandwich" : {
+      "Ingredients" : {
+        "Beef" : true,
+        "Bread" : true
+      },
+      "Picture" : "https://emeals-menubuilder.s3.amazonaws.com/v1/recipes/467491/pictures/large_warm-roast-beef-sandwiches.jpg",
+      "Time" : 5
+    },
+    "Tofu Hot Pot" : {
+      "Ingredients" : {
+        "Tofu" : true,
+        "Vegetables" : true
+      },
+      "Picture" : "http://images.media-allrecipes.com/userphotos/960x960/3755270.jpg",
+      "Time" : 15
+    },
+    "Tofu Veggie Stir-Fry" : {
+      "Ingredients" : {
+        "Tofu" : true,
+        "Vegetables" : true
+      },
+      "Picture" : "https://pioneerwoman.files.wordpress.com/2015/10/dsc_4051.jpg",
+      "Time" : 15
+    },
+    "Tofu on Rice with Soy Sauce" : {
+      "Ingredients" : {
+        "Rice" : true,
+        "Soy Sauce" : true,
+        "Tofu" : true
+      },
+      "Picture" : "https://pinchofyum.com/wp-content/uploads/Honey-Ginger-Tofu-Veggie-Stir-Fry-53-Square.jpg",
+      "Time" : 5
+    }
+  },
+  "Vegetable" : {
+    "Broccoli" : {
+      "Beef and Broccoli" : true
+    },
+    "Onion" : {
+      "Beef Teriyaki" : true,
+      "Chicken Fried Rice" : true
+    }
+  }
+}
