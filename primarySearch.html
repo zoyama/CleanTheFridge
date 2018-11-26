@@ -29,26 +29,81 @@
   $ ('.BUTTON_ID').click(function() {
     "value",
     // Replace BUTTON_NAME with name of button clicked
+
     window.location.href = "results.html?"+BUTTON_NAME;
   });
 </script>
 
+
+
+
 <!-- Results page code for recipe result input-->
 <script>
-  var queryString = decodeURIComponent(window.location.search);
-  queryString = queryString.substring(1);
-  var queries = queryString.split("?");
+  // Returns an array of recipes based off ingredient search
+  function runSearch() {
+    var queryString = decodeURIComponent(window.location.search);
 
-  var recipeList = queries[1];
+    var ingredientList = queryString.split("?");
 
-  var resultCount = firebase.database().ref(queries[1]).length;
+    var tempList =  [];
+    var finalList = [];
 
-  // resultOutput ID needs to match
-  document.getElementById("resultOutput").innerHTML(resultCount + " results found");
+    // Create initial list of recipes called tempList
+    var search = firebase.database().ref(ingredientList[1]);
+    search.on(
+      "value",
+      function(snap) {
+        snap.forEach(function(snapshot) {
+          tempList.push(snapshot.key);
+        });
+      });
 
-  // Loop for recipe input containers
-  for (var i = 0; i < resultCount; i++) {
-    //Recipe title, ingredients, time
+    // If recipes from other ingredients overlap, add to finalList
+    // If recipe does not overlap, add to tempList
+    for (let i = 2; i < ingredientList.length; i++) {
+      search = firebase.database().ref(ingredientList[i]);
+      search.on(
+        "value",
+        function(snap) {
+          snap.forEach(function(snapshot) {
+            tempList.forEach(function(recipe) {
+              if (snapshot.key.localeCompare(recipe) == 0) {
+                finalList.push(recipe);
+              } else {
+                tempList.push(snapshot.key);
+              }
+            });
+          });
+        });
+      }
+
+    // If no recipes overlapped and finalList is empty, tempList = finalList
+    if (finalList.length === 0) {
+      finalList = finalList.concat(tempList);
+    }
+
+    // Sort list by number of ingredients
+    // Add recipes to sortedList starting from 0 ingredients
+    // Use array of ingredients to get ingredient count of recipe
+    var sortedList = [];
+    for (let numIngredients = 0; sortedList.length == finalList.length; numIngredients++) {
+      finalList.forEach(function(recipe) {
+        let ingredientList = [];
+        let ingredientSearch = firebase.database().ref("recipes/" + recipe + "/ingredients");
+        ingredientSearch.on(
+          "value",
+          function(snap) {
+            snap.forEach(function(snapshot) {
+              ingredientList.push(snapshot.key);
+            });
+          });
+        if (ingredientList.length == numIngredients){
+          sortedList.push(recipe);
+        }
+      });
+    }
+
+  return sortedList;
+
   }
-
 </script>
