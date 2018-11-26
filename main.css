@@ -1,4 +1,264 @@
 /** main.css */
+@import url('https://fonts.googleapis.com/css?family=KoHo');
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,400,400i,500i,600,800,800i,900|Open+Sans');
+      html {
+          height: 100%;
+          background:  rgba(29, 193, 246, 0.1);
+          background-repeat:repeat;
+          background-size:cover;
+      }
+      body {
+          font-family: 'Montserrat';
+          font-weight: 600;
+          background-attachment: fixed;
+      }
+      .banner-whole {
+          position: relative;
+          height: 160px;
+      }
+      .space {
+          height: 30px;
+      }
+      .banner {
+          text-align: center;
+          position: relative;
+          text-align: center;
+          width: 100%;
+          padding: 0px, 0px, 10px, 0px;
+          background-color: rgba(29, 193, 246, .3);
+          margin-top: auto;
+          height: 70px;
+border-radius:20px;
+      }
+      .logo {
+          /**maybe absolute?**/
+          top: 0px;
+          left: 40px;
+          right: calc(100%-30px);
+          position: absolute;
+      }
+      .logo img {
+          width: 70px;
+          height: 70px;
+          border-radius: 35%;
+      }
+      .title-text-contain {
+          width: -1%;
+          /*text will begin at the very beginning
+          so you can change margin top
+          so that it brings the text down
+          to the bottom.*/
+          margin-top: 30px;
+          margin-left: auto;
+          margin-right: auto;
+          display: inline;
+          color: white;
+          font-size: 2em;
+          color: black;
+          left: 130px;
+          top: -13px;
+          text-shadow: 2px 1px 0px #fff, 3px 2px 0px rgba(0, 0, 0, 0.15);
+          position: absolute;
+          font-weight: 500;
+      }
+      .title-text {
+          letter-spacing: 0px;
+          display: inline;
+      }
+      .clean-text {
+          display: inline;
+      }
+      .fridge-text {
+          display: inline;
+      }
+      .menu-right {
+          width: 70px;
+          height: 70px;
+          background: rgba(0, 0, 0, 0);
+          position: relative;
+          float: right;
+          /**top: -30px;
+            right:-60%; **/
+          color: white;
+          border-radius: 10px
+      }
+      .menu-right img {
+          width: 70px;
+          height: 70px;
+      }
+      .menu-right:hover {
+          background: rgba(255, 255, 255, 0.4);
+      }
+      @keyframes darken {
+          0% {
+              background: rgba(0, 0, 0, 0);
+          }
+          100% {
+              background: rgba(255, 255, 255, .2);
+          }
+      }
+      .content-whole {
+          width: 100%;
+      }
+      .content {
+          position: relative;
+          text-align: center;
+      }
+      .add-contain {
+          display: flex;
+          padding-top: 0px;
+          justify-content: space-around;
+      }
+      .add {
+          top: 200px;
+          border-radius: 60px;
+          width: 280px;
+          font-weight: bold;
+          height: 100px;
+          background-color: rgba(51, 204, 51, 0);
+          color: white;
+          font-style: italic;
+          display: relative;
+          text-shadow: 0px 2px 3px #000000, 5px 6px 0px #01cccc, 7px 5px 0px #00bdbd;
+      }
+      .add-text {
+          font-size: 3em;
+          top: 15px;
+          position: relative;
+          display: inline-block;
+          font-weight: bold;
+      }
+      .add-text:hover {
+          font-size: 3.1em;
+          top: 10px;
+      }
+      .ingredient-box-contain {
+          width: 80%;
+          padding: 10px;
+          border: 5px solid rgba(0, 0, 0, 0);
+          width: 95%;
+          height: 50px;
+          display: flex;
+          justify-content: space-evenly;
+      }
+      .ingredient-box {
+          border-radius: 6px;
+          width: 200px;
+          margin: 10px;
+          box-shadow: 5px 10px black;
+          height: 70px;
+          background-color: rgba(0, 0, 129, 0.5);
+          color: white;
+          display: relative;
+          height: 33px;
+          border: 1px solid rgba(0, 0, 0, 0.5);
+          background: rgba(255, 255, 255, 0.2);
+          padding: 10px;
+      }
+      .ingredient-box-text {
+          font-size: 1em;
+          display: inline-block;
+      }
+      .ingredient-box:hover {
+          background-color: rgba(255, 0, 0, 1);
+      }
+      .option-contain {
+          display: flex;
+          padding-top: 30px;
+          flex-direction: column;
+          justify-content: space-around;
+          height: 485px;
+      }
+      .option {
+          border-radius: 6px;
+          width: 200px;
+          margin: 10px;
+          box-shadow: 5px 10px black;
+          height: 70px;
+          background-color: rgba(29, 193, 246, .5);
+          color: white;
+          display: relative;
+      }
+      .option:hover {
+          background-color: rgba(29, 193, 246, 1);
+      }
+      .option-text {
+          font-weight: bold;
+          font-size: 1.5em;
+          top: 15px;
+          position: relative;
+          display: inline-block;
+      }
+      .option-food-contain {
+          display: flex;
+          width: 100%;
+          justify-content: flex-start;
+      }
+      .food-contain {
+          display: flex;
+          width: 60%;
+          justify-content: space-around;
+      }
+      .food {
+          border-radius: 6px;
+          width: 100px;
+          margin: 10px;
+          box-shadow: 5px 10px white;
+          height: 40px;
+          background-color: rgba(0, 199, 129, 0.5);
+          color: white;
+          display: relative;
+      }
+      .food:hover {
+          background-color: rgba(0, 199, 129, 1);
+      }
+      .food-text {
+          font-weight: bold;
+          font-size: 1em;
+          top: 15px;
+          position: relative;
+          display: inline-block;
+      }
+      .recipe-gallery {
+        position: relative;
+        display:flex;
+        justify-content:space-evenly;
+background-color:rgba(0, 0, 255, .3);
+border-radius:15px;
+padding:10px; 
+    overflow-x: auto;
+    white-space: nowrap;
+          }
+    
+      .recipe-container {
+          margin:20px;
+          width: 300px;
+          height:250px;
+background-color:rgba(0, 0, 255, .3);
+          border: 5px solid black;
+          border-radius:10px;
+       }
+        
+       .recipe-image img {
+        width:300px;
+        height:auto;
+       
+        }
+        .recipe-text-container{ 
+          width:100%;
+          display:inline-block;
+            }
+       .recipe-title {
+          font-size:1em;
+          font-color: blue;
+          text-align: left;
+        }
+          .recipe-description {
+          font-size:.5em;
+          font-color:black;
+          text-align: right;
+            } 
+            
 header {
 	margin: 0 auto;
 	width: 96.5%;
@@ -34,7 +294,7 @@ header {
 .container2 {
 	float: right;
 	width: 76%;
-	height: 85vh;
+	height: 75vh;
 	border-radius: 10px;
 	margin-bottom: 3%;
 	background-color: #C5FFFF;
@@ -42,7 +302,7 @@ header {
 
 .recipetitle {
 	float: left;
-	width: 92%;
+	width: 91.5%;
 	height: 9%;
 	border-radius: 6px;
 	margin-left: 2%;
@@ -55,28 +315,26 @@ header {
 
 .recipeinfo {
 	border-radius: 10px;
-	width: 23%;
-	height: 60%;
-	float: left;
+	width: 24%;
+	height: 65%;
+	float: right;
 	margin-top: 2%;
 	padding: 2%;
-	margin-left: 2%;
 	background-color: white;
 }
 
 .ingredients {
 	border-radius: 10px;
-	width: 23%;
-	height: 60%;
+	width: 24%;
+	height: 65%;
 	float: right;
+	margin: 2%;
 	padding: 2%;
-	margin-top: 2%;
-	margin-right: 2%;
 	background-color: white;
 }
 
 .image {
-	width: 38%;
+	width: 35%;
 	float:left ;
 	margin-left: 2%;
 	margin-top: 2%;
