@@ -3,648 +3,797 @@
 <head>
 	<title> Clean the Fridge </title>
 	<style>
-		@import url('https://fonts.googleapis.com/css?family=KoHo');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,400,400i,500i,600,800,800i,900|Open+Sans');
-		html{
-    height:100%;
-    background: linear-gradient(90deg, purple, rgba(255,150,150,.6) 90%) no-repeat;
+      @import url('https://fonts.googleapis.com/css?family=KoHo');
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,400,400i,500i,600,800,800i,900|Open+Sans');
+      html {
+          height: 100%;
+          background:  rgba(29, 193, 246, 0.1);
+          background-repeat:repeat;
 
-}
-	.div-whole {
-		font-family: 'Montserrat';
-		background:linear-gradient(rgba(255,255,255,0) , rgba(0,0,0,.6));
-		height:100%;
-		font-weight: 600;
+          background-size:cover;
 
-	}
-	.banner-whole {
-		position:relative;
-		height:160px;
+      }
 
+      body {
+          font-family: 'Montserrat';
+          font-weight: 600;
+    background-attachment: fixed;
 
-	}
-	.space {
-		height:30px;
-	}
-	.banner {
-		text-align:center;
-		position:relative;
-		text-align: center;
-		width:100%;
-		padding: 0px, 0px, 10px, 0px;
-		background-color:rgba(0,0,0,0);
-		margin-top:auto;
-		height:150px;
-	}
+      }
 
-	.logo{
-		/**maybe absolute?**/
-		top:0px;
-		left:40px;
-		right:calc(100%-30px);
+      .banner-whole {
+          position: relative;
+          height: 160px;
+      }
 
-		position:absolute;
-	}
-	.logo img{
-		width: 70px;
-		height:70px;
-		border-radius:35%;
-	}
+      .space {
+          height: 30px;
+      }
 
-	.title-text-contain{
-		width:-1%;
-		/*text will begin at the very beginning
-		so you can change margin top
-		so that it brings the text down
-		to the bottom.*/
-		margin-top: 30px;
-		margin-left: auto;
-		margin-right: auto;
-		display: inline;
-				font-color:white;
-		font-size:2em;
-		color:white;
-		left:130px;
-		top:-13px;
-				position:absolute;
-				font-weight:500;
-	}
-	.title-text {
-		letter-spacing: 0px;
-		display: inline;
+      .banner {
+          text-align: center;
+          position: relative;
+          text-align: center;
+          width: 100%;
+          padding: 0px, 0px, 10px, 0px;
+          background-color: rgba(29, 193, 246, .3);
+          margin-top: auto;
+          height: 70px;
+border-radius:20px;
+      }
 
-	}
-	.clean-text {
-		display:inline;
+      .logo {
+          /**maybe absolute?**/
+          top: 0px;
+          left: 40px;
+          right: calc(100%-30px);
+          position: absolute;
+      }
 
-	}
-	.fridge-text {
-		display:inline;
-	}
+      .logo img {
+          width: 70px;
+          height: 70px;
+          border-radius: 35%;
+      }
 
-	.menu-right {
-		width:70px;
-		height: 70px;
-		background: rgba(0, 0, 0, 0);
-		position:relative;
-		float:right;
-			/**top: -30px;
-			right:-60%; **/
-		color:white;
-		border-radius: 10px
-	}
-	.menu-right img{
-		width:70px;
-		height:70px;
-	}
-	.menu-right:hover {
-				background: rgba(255, 255, 255, 0.4);
-	}
+      .title-text-contain {
+          width: -1%;
+          /*text will begin at the very beginning
+          so you can change margin top
+          so that it brings the text down
+          to the bottom.*/
+          margin-top: 30px;
+          margin-left: auto;
+          margin-right: auto;
+          display: inline;
+          color: white;
+          font-size: 2em;
+          color: black;
+          left: 130px;
+          top: -13px;
+          text-shadow: 2px 1px 0px #fff, 3px 2px 0px rgba(0, 0, 0, 0.15);
+          position: absolute;
+          font-weight: 500;
+      }
 
-	
-	@keyframes darken
-	{
-		0%	{background: rgba(0, 0, 0, 0);}
+      .title-text {
+          letter-spacing: 0px;
+          display: inline;
+      }
 
-	    100%   {background: rgba(255, 255, 255, .2);}
-	}
+      .clean-text {
+          display: inline;
+      }
 
-	.content-whole {
-		width:100%;
-	}
-	.content {
-		
-		position:relative;
+      .fridge-text {
+          display: inline;
+      }
 
-		text-align: center;
+      .menu-right {
+          width: 70px;
+          height: 70px;
+          background: rgba(0, 0, 0, 0);
+          position: relative;
+          float: right;
+          /**top: -30px;
+            right:-60%; **/
+          color: white;
+          border-radius: 10px
+      }
 
+      .menu-right img {
+          width: 70px;
+          height: 70px;
+      }
 
-	}
-	.add-contain{
+      .menu-right:hover {
+          background: rgba(255, 255, 255, 0.4);
+      }
 
-		display:flex;
-		padding-top:20px;
-		justify-content: space-around;
- 
-	}
+      @keyframes darken {
+          0% {
+              background: rgba(0, 0, 0, 0);
+          }
+          100% {
+              background: rgba(255, 255, 255, .2);
+          }
+      }
 
-	.add {
-		top:200px;
-		border-radius: 60px;
-		width:280px;
-				font-weight:bold;
-		height:100px;
-		background-color:rgba(51, 204, 51,0);
-		color:white;
-			font-style: italic;
+      .content-whole {
+          width: 100%;
+      }
 
-				display:relative;
+      .content {
+          position: relative;
+          text-align: center;
+      }
 
+      .add-contain {
+          display: flex;
+          padding-top: 0px;
+          justify-content: space-around;
+      }
 
+      .add {
+          top: 200px;
+          border-radius: 60px;
+          width: 280px;
+          font-weight: bold;
+          height: 100px;
+          background-color: rgba(51, 204, 51, 0);
+          color: white;
+          font-style: italic;
+          display: relative;
+          text-shadow: 0px 2px 3px #000000, 5px 6px 0px #01cccc, 7px 5px 0px #00bdbd;
+      }
 
-	}
+      .add-text {
+          font-size: 3em;
+          top: 15px;
+          position: relative;
+          display: inline-block;
+          font-weight: bold;
+      }
 
-	.add-text {
-		font-size:3em;
-		top:15px;
-		position:relative;
-		display:inline-block;
-	font-weight: bold;
+      .add-text:hover {
+          font-size: 3.1em;
+          top: 10px;
+      }
 
+      .ingredient-box-contain {
+          width: 80%;
+          padding: 10px;
+          border: 5px solid rgba(0, 0, 0, 0);
+          width: 95%;
+          height: 50px;
+          display: flex;
+          justify-content: space-evenly;
+      }
 
-	}
-	.add-text:hover {
+      .ingredient-box {
+          border-radius: 6px;
+          width: 200px;
+          margin: 10px;
+          box-shadow: 5px 10px black;
+          height: 70px;
+          background-color: rgba(0, 0, 129, 0.5);
+          color: white;
+          display: relative;
+          height: 33px;
+          border: 1px solid rgba(0, 0, 0, 0.5);
+          background: rgba(255, 255, 255, 0.2);
+          padding: 10px;
+      }
 
-		font-size:3.1em;
-		top:10px;
+      .ingredient-box-text {
+          font-size: 1em;
+          display: inline-block;
+      }
 
+      .ingredient-box:hover {
+          background-color: rgba(255, 0, 0, 1);
+      }
 
-	}
+      .option-contain {
+          display: flex;
+          padding-top: 30px;
+          flex-direction: column;
+          justify-content: space-around;
+          height: 485px;
+      }
 
+      .option {
+          border-radius: 6px;
+          width: 200px;
+          margin: 10px;
+          box-shadow: 5px 10px black;
+          height: 70px;
+          background-color: rgba(29, 193, 246, .5);
+          color: white;
+          display: relative;
+      }
 
-	.ingredient-box-contain{
-		width:80%;
+      .option:hover {
+          background-color: rgba(29, 193, 246, 1);
+      }
 
-		padding:10px;
-		border:5px solid rgba(0, 0, 0, 0);
-		width:95%;
-		height:50px;
-		display:flex;
-		justify-content: space-evenly;
-	}
+      .option-text {
+          font-weight: bold;
+          font-size: 1.5em;
+          top: 15px;
+          position: relative;
+          display: inline-block;
+      }
 
-	.ingredient-box{
-		border-radius: 6px;
-		width:200px;
-		margin:10px;
-		 box-shadow: 5px 10px black;
-		height:70px;
-		background-color:rgba(0, 0, 129, 0.5	);
-		color:white;
-				display:relative;
-		height:33px;
+      .option-food-contain {
+          display: flex;
+          width: 100%;
+          justify-content: flex-start;
 
-				border:1px solid rgba(0, 0, 0, 0.5);
+      }
 
-			background:rgba(255,255,255,0.2);
-		padding:10px;
+      .food-contain {
+          display: flex;
+          width: 60%;
+          justify-content: space-around;
+      }
 
-	}
+      .food {
+          border-radius: 6px;
+          width: 100px;
+          margin: 10px;
+          box-shadow: 5px 10px white;
+          height: 40px;
+          background-color: rgba(0, 199, 129, 0.5);
+          color: white;
+          display: relative;
+      }
 
-	.ingredient-box-text{
-		font-size:1em;
-		display:inline-block;
-	}
-		.ingredient-box:hover {
-					background-color:rgba(255,0, 0, 1	);
+      .food:hover {
+          background-color: rgba(0, 199, 129, 1);
+      }
 
-		}
-
-		.option-contain{
-
-		display:flex;
-		padding-top:30px;
-		flex-direction: column;
-		justify-content: space-around;
-	}
-
-	.option {
-		border-radius: 6px;
-		width:200px;
-		margin:10px;
-		 box-shadow: 5px 10px black;
-		height:70px;
-		background-color:rgba(0, 0, 129, 0.5	);
-		color:white;
-				display:relative;
-
-
-
-	}
-	.option:hover {
-				background-color:rgba(0, 0, 129, 1	);
-
-	}
-
-	.option-text {
-	font-weight: bold;
-		font-size:1.5em;
-		top:15px;
-		position:relative;
-		display:inline-block;
-
-
-	}
-	.option-food-contain{
-		display:flex;
-		width:100%;
-		justify-content:flex-start; 
-	}
-
-	.food-contain{
-		display:flex;
-		width:60%;
-		justify-content: space-around;
-		}
-	.food {
-			border-radius: 6px;
-			width:100px;
-			margin:10px;
-			 box-shadow: 5px 10px white;
-			height:40px;
-			background-color:rgba(0, 199, 129, 0.5	);
-			color:white;
-			display:relative;
-
-
-
-		}
-		.food:hover {
-					background-color:rgba(0, 199, 129, 1	);
-
-		}
-
-		.food-text {
-		font-weight: bold;
-			font-size:1em;
-			top:15px;
-			position:relative;
-			display:inline-block;
+      .food-text {
+          font-weight: bold;
+          font-size: 1em;
+          top: 15px;
+          position: relative;
+          display: inline-block;
+      }
 
 
-		}
-	</style>
+      .recipe-gallery {
+        position: relative;
+        display:flex;
+        justify-content:space-evenly;
+background-color:rgba(0, 0, 255, .3);
+border-radius:15px;
+padding:10px; 
+    overflow-x: auto;
+    white-space: nowrap;
+          }
+
+    
+
+      .recipe-container {
+          margin:20px;
+          width: 300px;
+          height:250px;
+background-color:rgba(0, 0, 255, .3);
+
+          border: 5px solid black;
+          border-radius:10px;
+       }
+        
+       .recipe-image img {
+        width:300px;
+        height:auto;
+       
+        }
+        .recipe-text-container{ 
+          width:100%;
+          display:inline-block;
+            }
+       .recipe-title {
+          font-size:1em;
+          font-color: blue;
+          text-align: left;
+        }
+
+          .recipe-description {
+          font-size:.5em;
+          font-color:black;
+          text-align: right;
+            } 
+
+
+</style>
 </head>
-	<body>
-		<div class="div-whole"> 
-			<!--<div class="space">
-			</div> -->
-			<div class="banner-whole">
-
-				<div class="banner">
-
-					<div class="logo">
-						<img src="logo.jpg" >
-					</div>
-
-								<div class="title-text-contain">
-										<p class="clean-text">
-											Clean
-										</p>
-
-										<p class="title-text">
-											the
-										</p>
-
-										<p class="fridge-text">
-											Fridge
-										</p>
-										
-								</div>
-
-
-						<div class="menu-right">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/VisualEditor_-_Icon_-_Menu.svg/1024px-VisualEditor_-_Icon_-_Menu.svg.png" alt="menu">
-						</div>			
-				</div>	
-		
-			</div>
-		<!-- asdfasdf stuff stuff ends the header end end end-->
-		
-		<!--  asdf -->
-			<div class="content-whole">
-				<div class="content">
-					
-					<div class="add-contain">
-						
-							<div class="add">
-								<div class="add-text">
-								Add +
-								</div>
-							</div> 	
-
-
-						<div class="add">
-							<div class="add-text">
-							Search&#128269;
-
-							</div>
-						</div> 	
-					</div>
-<!---ddddddddddddddd -->
-							
-				<div class="ingredient-box-contain">
-					<div class="ingredient-box">
-						<div class="ingredient-box-text">
-							Apples
-						</div>
-					</div>
-
-					<div class="ingredient-box">
-						<div class="ingredient-box-text">
-							Apples
-						</div>
-					</div>
-
-				
-				</div>
-
-				</div>
-
-
-
-<!-- flex the whole thing insideasdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-					<div class="option-contain">
-						
-
-
-						<div class="option-food-contain">
-
-							<div class = "option">
-								<div class ="option-text">
-									Protein
-								</div>
-							</div>
-							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-					
-					  <div class="food-contain">
-
-						<div class = "food">
-							<div class ="food-text">
-								Chicken
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Beef
-							</div>
-						</div>				
-
-						<div class = "food">
-							<div class ="food-text">
-								Pork
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Peanut
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								tofu
-							</div>
-						</div>	
-																	
-					</div>	
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-						</div>
-
-
-
-						<div class="option-food-contain">
-							<div class = "option">
-								<div class ="option-text">
-									Grains
-								</div>
-							</div>		
-
-
-
-							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-					
-					  <div class="food-contain">
-
-						<div class = "food">
-							<div class ="food-text">
-								Flour
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Bread
-							</div>
-						</div>				
-
-						<div class = "food">
-							<div class ="food-text">
-								Wheat
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Seeds
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Grains
-							</div>
-						</div>	
-																	
-					</div>	
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-
-
-
-						</div>
-
-
-
-						<div class="option-food-contain">
-							<div class = "option">
-								<div class ="option-text">
-									Dairy
-								</div>
-							</div>
-
-
-							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-					
-					  <div class="food-contain">
-
-						<div class = "food">
-							<div class ="food-text">
-								Cheese
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Milk
-							</div>
-						</div>				
-
-						<div class = "food">
-							<div class ="food-text">
-								Yogurt
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Swiss
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Dairy
-							</div>
-						</div>	
-																	
-					</div>	
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-
-
-						</div>
-
-
-
-						<div class="option-food-contain">
-							<div class = "option">
-								<div class ="option-text">
-									Fats & Sugars
-								</div>
-							</div>
-
-
-
-							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-					
-					  <div class="food-contain">
-
-						<div class = "food">
-							<div class ="food-text">
-								Cola
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Jam
-							</div>
-						</div>				
-
-						<div class = "food">
-							<div class ="food-text">
-								Lard
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Caramel
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Buttery
-							</div>
-						</div>	
-																	
-					</div>	
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-						</div>	
-
-
-
-						<div class="option-food-contain">
-							<div class = "option">
-								<div class ="option-text">
-									Fruits & Veggies
-								</div>
-							</div>		
-
-
-							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-					
-					  <div class="food-contain">
-
-						<div class = "food">
-							<div class ="food-text">
-								Broccoli
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Apple
-							</div>
-						</div>				
-
-						<div class = "food">
-							<div class ="food-text">
-								Orange
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Mango
-							</div>
-						</div>
-
-						<div class = "food">
-							<div class ="food-text">
-								Peach
-							</div>
-						</div>	
-																	
-					</div>	
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-							<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-						</div>
-
-
-
-					</div>	
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-					
-					
-<!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
-
-
-
-
-				</div>
-	 		 </div>
-	 		</div>
-
-
-
-
-		</div>
+	<div class="div-whole">
+    <!--<div class="space">
+            </div> -->
+
+    <div class="banner-whole">
+        <div class="banner">
+            <div class="logo">
+                <img src="logo.jpg">
+            </div>
+
+            <div class="title-text-contain">
+                <p class="clean-text">
+                    Clean
+                </p>
+
+                <p class="title-text">
+                    the
+                </p>
+
+                <p class="fridge-text">
+                    Fridge
+                </p>
+            </div>
+
+            <div class="menu-right">
+                <img alt="menu" src="picture/menu.png">
+            </div>
+        </div>
+    </div>
+    <!-- asdfasdf stuff stuff ends the header end end end-->
+    <!--  asdf -->
+<div class="recipe-gallery">
+  <div class="recipe-container">
+  
+    <div class="recipe-image">
+      <img src="picture/chickenteriyaki.jpg" alt="chicken teriyaki">
+    </div>
+    
+    <div class="recipe-text-container">
+        <div class="recipe-title">
+          Chicken Teriyaki
+        </div>
+        <div class="recipe-description">
+          Yummy delicious chicken teriyaki in your tummy wummy.
+        </div>
+    </div>
+  </div>
+
+    <div class="recipe-container">
+          <div class="recipe-image">
+            <img src="picture/creamofmushroom.jpg" alt="creamofmushroom">
+          </div>
+          
+          <div class="recipe-text-container">
+              <div class="recipe-title">
+                Cream of Mushroom
+              </div>
+              <div class="recipe-description">
+                Yummy Cream of Mushroom in your tummy wummy.
+              </div>
+          </div>
+      </div>
+
+
+        <div class="recipe-container">
+          <div class="recipe-image">
+            <img src="picture/dillbakedfish.jpg" alt="dill baked fish">
+          </div>
+          
+          <div class="recipe-text-container">
+              <div class="recipe-title">
+                Dill Baked Fish
+              </div>
+              <div class="recipe-description">
+                Dill baked fish in your tummy wummy.
+              </div>
+          </div>
+      </div>
+            
+
+        <div class="recipe-container">
+          <div class="recipe-image">
+            <img src="picture/fishandchips.jpg" alt="fish and chips">
+          </div>
+          
+          <div class="recipe-text-container">
+              <div class="recipe-title">
+                Fish and Chips
+              </div>
+              <div class="recipe-description">
+               Fish and chips in your tummy wummy.
+              </div>
+          </div>
+      </div>
+            
+
+
+</div>
+
+
+
+    <!-- asdfasdf stuff stuff ends the header end end end-->
+    <!--  asdf -->
+
+
+
+    <div class="content-whole" id="content">
+        <div class="content">
+            <div class="add-contain">
+<!--                 <div class="add">
+                    <div class="add-text" id="addText">
+                        Add +
+                    </div>
+                </div>
+ -->
+                <div class="add">
+                    <div class="add-text" id="searchText">
+                        Search&#128269;
+                    </div>
+                </div>
+            </div>
+            <!---dddddddddddd   --><!-- flex the whole thing insideasdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+            <div class="option-contain" id="optionContain">
+                <!-- flex the whole thing insideasdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+                <div class="option-food-contain">
+                    <div class="option" id="protein">
+                        <div class="option-text">
+                            Protein
+                        </div>
+                    </div>
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+                    <div class="food-contain">
+                        <div class="food" id="chicken">
+                            <div class="food-text">
+                                Chicken
+                            </div>
+                        </div>
+
+                        <div class="food" id="beef">
+                            <div class="food-text">
+                                Beef
+                            </div>
+                        </div>
+
+                        <div class="food" id="tofu">
+                            <div class="food-text">
+                                Tofu
+                            </div>
+                        </div>
+
+                        <div class="food" id="seafood">
+                            <div class="food-text">
+                                Seafood
+                            </div>
+                        </div>
+
+                        <div class="food" id="egg">
+                            <div class="food-text">
+                                Egg
+                            </div>
+                        </div>
+                    </div>
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                </div>
+
+                <div class="option-food-contain">
+                    <div class="option" id="grain">
+                        <div class="option-text">
+                            Grains
+                        </div>
+                    </div>
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+                    <div class="food-contain">
+                        <div class="food" id="flour">
+                            <div class="food-text">
+                                Flour
+                            </div>
+                        </div>
+
+                        <div class="food" id="bread">
+                            <div class="food-text">
+                                Bread
+                            </div>
+                        </div>
+
+                        <div class="food" id="noodles">
+                            <div class="food-text">
+                                Noodles
+                            </div>
+                        </div>
+
+                        <div class="food" id="panko">
+                            <div class="food-text">
+                                panko
+                            </div>
+                        </div>
+                    </div>
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                </div>
+
+                <div class="option-food-contain">
+                    <div class="option" id="dairy">
+                        <div class="option-text">
+                            Dairy
+                        </div>
+                    </div>
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+                    <div class="food-contain">
+                        <div class="food" id="cheese">
+                            <div class="food-text">
+                                Cheese
+                            </div>
+                        </div>
+
+                        <div class="food" id="milk">
+                            <div class="food-text">
+                                Milk
+                            </div>
+                        </div>
+
+                        <div class="food" id="yogurt">
+                            <div class="food-text">
+                                Yogurt
+                            </div>
+                        </div>
+                    </div>
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                </div>
+
+                <div class="option-food-contain">
+                    <div class="option" id="sauces" >
+                        <div class="option-text">
+                            Sauces
+                        </div>
+                    </div>
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+                    <div class="food-contain">
+                        <div class="food" id="teriyakiSauce">
+                            <div class="food-text" id="teriyakiSauce">
+                                Teriyaki sauce
+                            </div>
+                        </div>
+
+                        <div class="food" id="jam">
+                            <div class="food-text">
+                                Jam
+                            </div>
+                        </div>
+
+                        <div class="food" id="soySauce">
+                            <div class="food-text">
+                                Soy Sauce
+                            </div>
+                        </div>
+
+                        <div class="food" id="butter">
+                            <div class="food-text">
+                                butter
+                            </div>
+                        </div>
+                    </div>
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                </div>
+
+                <div class="option-food-contain">
+                    <div class="option" id="fv">
+                        <div class="option-text" id="fv">
+                            Fruits & Veggies
+                        </div>
+                    </div>
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+
+                    <div class="food-contain">
+                        <div class="food" id="brocolli">
+                            <div class="food-text">
+                                Broccoli
+                            </div>
+                        </div>
+
+                        <div class="food" id="onion">
+                            <div class="food-text">
+                                Onion
+                            </div>
+                        </div>
+
+                        <div class="food" id="mushroom">
+                            <div class="food-text">
+                                Mushroom
+                            </div>
+                        </div>
+
+                        <div class="food" id="dill">
+                            <div class="food-text">
+                                Dill
+                            </div>
+                        </div>
+                    </div>
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                    <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+                </div>
+            </div>
+            <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+            <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    /*<![CDATA[*/
+$(document).ready(function() {
+
+
+    var optionshow = false;
+    $(".option").show();
+    $("#chicken, #beef,#tofu, #seafood, #egg").hide();
+    $("#flour, #bread, #noodles, #panko").hide();
+    $("#cheese, #milk, #yogurt").hide();
+    $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
+    $("#brocolli, #onion, #mushroom,#dill").hide();
+    //
+    var proteinShow = false;
+    $("#protein").click(function(event) {
+        if (!proteinShow) {
+            proteinShow = true;
+            $("#chicken, #beef, #tofu, #seafood, #egg").show();
+        } else {
+            proteinShow = false;
+            $("#chicken, #beef, #tofu, #seafood, #egg").hide();
+        }
+    });
+    /////////////////
+    var grainShow = false;
+    $("#grain").click(function(event) {
+        if (!grainShow) {
+            grainShow = true;
+            $("#flour, #bread, #noodles, #panko").show();
+        } else {
+            grainShow = false;
+            $("#flour, #bread, #noodles, #panko").hide();
+        }
+    });
+    /////////////////
+    var dairyShow = false;
+    $("#dairy").click(function(event) {
+        if (!dairyShow) {
+            dairyShow = true;
+            $("#cheese, #milk, #yogurt").show();
+        } else {
+            dairyShow = false;
+            $("#cheese, #milk, #yogurt").hide();
+        }
+    });
+    ///
+    var sauceShow = false;
+    $("#sauces").click(function(event) {
+        if (!sauceShow) {
+            sauceShow = true;
+            $("#teriyakiSauce, #jam, #soySauce,#butter").show();
+        } else {
+            sauceShow = false;
+            $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
+        }
+    });
+    var sauceShow = false;
+    $("#sauce").click(function(event) {
+        if (!sauceShow) {
+            sauceShow = true;
+            $("#teriyakiSauce, #jam, #soySauce,#butter").show();
+        } else {
+            sauceShow = false;
+            $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
+        }
+    });
+    ///////////////
+    var fvShow = false;
+    $("#fv").click(function(event) {
+        if (!fvShow) {
+            fvShow = true;
+            $("#brocolli, #onion, #mushroom,#dill").show();
+        } else {
+            fvShow = false;
+            $("#brocolli, #onion, #mushroom,#dill").hide();
+        }
+    });
+ 
+    /* this is for if we want perhaps one or more ??? 
+    var isClicked = false; 
+    function clickAndAdd(id, index) {
+      //console.log("func: " + isClicked);
+
+      $(id).click(function(event) {
+        //console.log("listn: " + isClicked);
+
+        if (!foodlist[index] && !isClicked) {
+          foodlist[index] = true;
+          $(id).css("background-color", "black");
+          isClicked = true;
+          //console.log("click: " + isClicked); 
+
+        } else if(isClicked && foodlist[index]) {
+          isClicked = false
+          foodlist[index] = false;
+          $(id).css("background-color", "rgba(0, 199, 129, 0.5)");
+        }
+      });
+    }
+*/
+    var isFirstClick = true;
+    var prevIndex;
+    var prevID;
+
+    function clickAndSwitch(id, index){ 
+     $(id).click(function(event) {
+        if (isFirstClick) { 
+          $(id).css("background-color", "black");
+          prevIndex = index;
+          prevID = id;
+          isFirstClick = false;
+        }
+        else if (!isFirstClick) {
+          $(prevID).css("background-color", "rgba(0, 199, 129, 0.5)");
+          
+          prevIndex = index;
+          prevID = id;
+
+          $(id).css("background-color", "black");
+        }
+     });
+
+    }
+   clickAndSwitch("#chicken", 0);
+   clickAndSwitch("#beef", 1);
+    clickAndSwitch("#tofu", 2);
+    clickAndSwitch("#seafood", 3)
+    clickAndSwitch("#egg", 4);
+    clickAndSwitch("#flour", 5);
+    clickAndSwitch("#bread", 6);
+    clickAndSwitch("#noodles", 7);
+    clickAndSwitch("#panko", 8); 
+    clickAndSwitch("#cheese", 9);
+    clickAndSwitch("#milk", 10); 
+    clickAndSwitch("#yogurt",11);
+    clickAndSwitch("#teriyakiSauce", 12);
+    clickAndSwitch("#jam", 13);
+    clickAndSwitch("#soySauce", 14);
+    clickAndSwitch("#butter", 15);
+    clickAndSwitch("#brocolli", 16);
+    clickAndSwitch("#onion", 17);
+    clickAndSwitch("#mushroom",18);
+    clickAndSwitch("#dill", 19);
+
+    $("#searchText").click(function(event) {
+      if (prevID == undefined) {
+        alert("No coffee selected");
+      }
+
+      var query = prevID.substring(1); 
+      window.location.href = "index.html?" + query;
+    });
+
+});
+
+
+
+    /*]]>*/
+
+  </script>
 	</body>
 </html>
