@@ -22,51 +22,6 @@
 			  };
 			  firebase.initializeApp(config);
 			</script>
-
-			<style>
-			@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC');
-
-			a {text-decoration: none;}
-			body {background-color: #ECF4F6; font-family: 'Noto Sans SC', sans-serif;}
-			p {margin: 0%; font-size: 0.9em;}
-			body > div {border: 2px solid black;}
-			ul {padding-inline-start: 10px; margin-bottom: 2%;}
-			li {margin-inline-start: 3%; 				padding-left: 2%;}
-			input {position: relative; top: 2px;}
-			section {margin-bottom: 3em;}
-
-			#selected + ul {
-				list-style-type: none;
-				padding-inline-start: 0px;
-				font-size: 0.9em;
-			}
-
-			div + p {
-				margin: 0%;
-			}
-
-			.ss {
-				border-right: 1px solid;
-    		border-top: 1px solid;
-    		border-left: 1px solid;
-    		border-radius: 4px 4px 0px 0px;
-    		background-color: white;
-			}
-
-			.s{
-				border-right: 1px solid;
-    		border-bottom: 1px solid;
-    		border-left: 1px solid;
-			}
-
-			#s {
-				background-color: white;
-				border-radius: 0px 0px 4px 4px;
-				padding: 7%;
-				margin-bottom: 6%;
-			}
-
-			</style>
 		</head>
 			<body>
 				<header id="navbar">
@@ -74,33 +29,19 @@
 				</header>
 				<div id="container1">
 					<section>
-						<h4 id="ingre"> Ingredients: </h4>
+						<h4 id="ingre"> Selected Ingredient: </h4>
 						<ul>
 							<li> Milk </li>
-							<li> Eggs </li>
-							<li> Chicken </li>
 						</ul>
 					</section>
-
-					<section>
-						<h4 id="selected"> Filters </h4>
-						<ul id="filters">
-							<li id="ss">Serving &nbsp; <button id="show1">+</button></li>
-							<li id="s">1 Serving <input type="checkbox" name="oneServing" value="one"><br>
-							2 ~ 4 Servings <input type="checkbox" name="twoServing" value="two"> <br>
-							>4 Servings <input type="checkbox" name="fourServing" value="four">
-							<li>Difficulty <button id="show2">+</button> </li>
-							<li>Exclusions <button id="show3">+</button> </li>
-						</ul>
-					</section>
-				</div>
+				</div>	
 
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 				</script>
 				<script>
 					$(document).ready(function() {
 						var body = $("body");
-						var searchResults = ["Baked Chicken"];
+						var searchResults = ["Baked_Chicken", "Beef_Noodle_Soup", "Calamari", "Chicken Wings"];
 
 						searchResults.forEach(function(element) {
 							var ref = firebase.database().ref("Recipes/"+element);
@@ -115,9 +56,16 @@
 										var name = snap.val();
 										var ingre = snap.val().Ingredients;
 										var picURL = snap.val().Picture;
-										var time = snap.val().Time;							
+										var time = snap.val().Time;					
 
-										/**
+										console.log(ingre);	
+										var ingreString = JSON.stringify(ingre);	
+										console.log(ingreString);
+
+										for (var key in ingre){
+											console.log(key);
+										};
+										/*
 										*
 										*ELEMENTS CREATED
 										*
@@ -130,6 +78,7 @@
 										var box2 = $("<div></div>");
 
 										var box3 = $("<div></div>");
+										var box4 = $("<div></div>");
 										var ingred = $("<p></p>");
 
 
@@ -142,7 +91,7 @@
 										*
 										*/
 										$(title).text(name);
-										$(ingred).text(ingre);
+										//$(ingred).text(ingre);
 										$(img).attr('src', picURL);
 										$(info).text("Step One is...");
 
@@ -155,8 +104,8 @@
 										*/								
 										$(container).addClass("container2");
 										$(box1).addClass("recipetitle");
-										$(box2).addClass("recipeinfo");
-										$(box3).addClass("ingredients");
+										$(box3).addClass("recipeinfo");
+										$(box4).addClass("ingredients");
 										$(img).addClass("image");
 										/**
 										*APPENDS
@@ -167,9 +116,10 @@
 										$(box1).append(element);
 										$(container).append(img);
 										$(container).append(box2);
-										$(container).append(box3);
-										$(box2).append(info);
-										$(box3).append(ingred);
+										$(box2).append(box3);
+										$(box2).append(box4);
+										$(box3).append(info);
+										$(box4).append(ingre);
 								})
 								
 							})		
