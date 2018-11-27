@@ -1,0 +1,202 @@
+{
+"protein" : {
+  "chicken" : {
+    "chicken_fried_rice" : true,
+    "baked_chicken" : true,
+    "cream_of_mushroom_chicken" : true,
+    "chicken_chow_mein" : true,
+    "chicken_teriyaki" : true,
+    "chicken_wings" : true
+  },
+  "beef" : {
+    "grilled_beef_steak" : true,
+    "roast_beef_sandwich" : true,
+    "beef_noodle_soup" : true,
+    "beef_teriyaki" : true,
+    "beef_and_broccoli" : true
+  },
+  "tofu" : {
+    "tofu_stir-fry" : true,
+    "tofu_hot_pot" : true,
+    "buddhist_feast" : true,
+    "tofu_on_rice_with_soy_sauce" : true
+  },
+  "seafood" : {
+    "dill_baked_fish" : true,
+    "fish_and_chips" : true,
+    "calamari" : true,
+    "prawn_tempura" : true
+  }
+},
+"vegetable" : {
+  "broccoli" : {
+    "beef_and_broccoli" : true
+  },
+  "onion" : {
+    "chicken_fried_rice" : true,
+    "beef_teriyaki" : true,
+  }
+},
+"grains" : {
+  "rice" : {
+    "chicken_fried_rice" : true,
+    "beef_teriyaki" : true,
+    "buddhist_feast" : true,
+    "tofu_on_rice_with_soy_sauce" : true
+  },
+  "noodles" : {
+    "beef_noodle_soup" : true,
+    "buddhist_feast" : true
+  },
+  "bread" : {
+    "roast_beef_sandwich" : true
+  },
+  "potatoes" : {
+    "fish_and_chips" : true
+  }
+},
+"recipes" : {
+  "chicken_fried_rice" : {
+    "ingredients" : {
+      "chicken" : true,
+      "rice" : true,
+      "onion" : true,
+      "egg" : true
+    },
+    "picture" : "chickenfriedrice.jpg",
+    "time" : 15
+  },
+  "baked_chicken" : {
+    "ingredients" : {
+      "chicken" : true,
+      "flour" : true,
+      "egg" : true
+    },
+    "picture" : "bakedchicken.jpg",
+    "time" : 25
+  },
+  "cream_of_mushroom_chicken" : {
+    "ingredients" : {
+      "chicken" : true,
+      "flour" : true,
+      "mushroom" : true
+    },
+    "picture" : "creamofmushroomchicken.jpg",
+    "time" : 30
+  },
+  "chicken_wings" : {
+    "ingredients" : {
+      "chicken" : true,
+      "flour" : true,
+      "eggs" : true
+    },
+    "picture" : "chickenwings.jpg",
+    "time" : 15
+  },
+  "grilled_beef_steak" : {
+    "ingredients" : {
+      "beef" : true
+    },
+    "picture" : "grilledbeefsteak.jpg",
+    "time" : 10
+  },
+  "roast_beef_sandwich" : {
+    "ingredients" : {
+      "beef" : true,
+      "bread" : true
+    },
+    "picture" : "roastbeefsandwich.jpg",
+    "time" : 5
+  },
+  "beef_noodle_soup" : {
+    "ingredients" : {
+      "beef" : true,
+      "noodles" : true
+    },
+    "picture" : "beefnoodlesoup.jpg",
+    "time" : 15
+  },
+  "beef_teriyaki" : {
+    "ingredients" : {
+      "beef" : true,
+      "teriyaki_sauce" : true,
+      "rice" : true,
+      "onions" : true
+    },
+    "picture" : "beefteriyaki.jpg",
+    "time" : 10
+  },
+  "tofu_veggie_stir-fry" : {
+    "ingredients" : {
+      "tofu" : true,
+      "vegetables" : true
+    },
+    "picture" : "tofuveggiestirfry.jpg",
+    "time" : 15
+  },
+  "tofu_hot_pot" : {
+    "ingredients" : {
+      "tofu" : true,
+      "vegetables" : true
+    },
+    "picture" : "tofuhotpot.jpg",
+    "time" : 15
+  },
+  "buddhist_feast" : {
+    "ingredients" : {
+      "tofu" : true,
+      "vegetables" : true,
+      "mushrooms" : true,
+      "noodles" : true,
+      "rice" : true
+    },
+    "picture" : "buddhistfeast.jpg",
+    "time" : 15
+  },
+  "tofu_on_rice_with_soy_sauce" : {
+    "ingredients" : {
+      "tofu" : true,
+      "rice" : true,
+      "soy_sauce" : true
+    },
+    "picture" : "tofuonricewithsoysauce.jpg",
+    "time" : 5
+  },
+  "dill_baked_fish" : {
+    "ingredients" : {
+      "fish" : true,
+      "dill" : true
+    },
+    "picture" : "dillbakedfish.jpg",
+    "time" : 30
+  },
+  "fish_and_chips" : {
+    "ingredients" : {
+      "fish" : true,
+      "dill" : true,
+      "potatoes" : true
+    },
+    "picture" : "fishandchips.jpg",
+    "time" : 25
+  },
+  "calamari" : {
+    "ingredients" : {
+      "squid" : true,
+      "flour" : true,
+      "eggs" : true
+    },
+    "picture" : "calamari.jpg",
+    "time" : 10
+  },
+  "prawn_tempura" : {
+    "ingredients" : {
+      "prawn" : true,
+      "flour" : true,
+      "eggs" : true,
+      "panko" : true
+    },
+    "picture" : "prawntempura.jpg",
+    "time" : 10
+  }
+}
+}

@@ -1,0 +1,202 @@
+{
+"Protein" : {
+  "Chicken" : {
+    "Chicken_Fried_Rice" : true,
+    "Baked_Chicken" : true,
+    "Cream_of_Mushroom_Chicken" : true,
+    "Chicken_Chow_Mein" : true,
+    "Chicken_Teriyaki" : true,
+    "Chicken_Wings" : true
+  },
+  "Beef" : {
+    "Grilled_Beef_Steak" : true,
+    "Roast_Beef_Sandwich" : true,
+    "Beef_Noodle_Soup" : true,
+    "Beef_Teriyaki" : true,
+    "Beef_and_Broccoli" : true
+  },
+  "Tofu" : {
+    "Tofu_Stir-Fry" : true,
+    "Tofu_Hot_Pot" : true,
+    "Buddhist_Feast" : true,
+    "Tofu_on_Rice_with_Soy_Sauce" : true
+  },
+  "Seafood" : {
+    "Dill_Baked_Fish" : true,
+    "Fish_and_Chips" : true,
+    "Calamari" : true,
+    "Prawn_Tempura" : true
+  }
+},
+"Vegetable" : {
+  "Broccoli" : {
+    "Beef_and_Broccoli" : true
+  },
+  "Onion" : {
+    "Chicken_Fried_Rice" : true,
+    "Beef_Teriyaki" : true,
+  }
+},
+"Grains" : {
+  "Rice" : {
+    "Chicken_Fried_Rice" : true,
+    "Beef_Teriyaki" : true,
+    "Buddhist_Feast" : true,
+    "Tofu_on_Rice_with_Soy_Sauce" : true
+  },
+  "Noodles" : {
+    "Beef_Noodle_Soup" : true,
+    "Buddhist_Feast" : true
+  },
+  "Bread" : {
+    "Roast_Beef_Sandwich" : true
+  },
+  "Potatoes" : {
+    "Fish_and_Chips" : true
+  }
+},
+"Recipes" : {
+  "Chicken_Fried_Rice" : {
+    "Ingredients" : {
+      "Chicken" : true,
+      "Rice" : true,
+      "Onion" : true,
+      "Egg" : true
+    },
+    "Picture" : "chickenFriedRice.jpg",
+    "Time" : 15
+  },
+  "Baked_Chicken" : {
+    "Ingredients" : {
+      "Chicken" : true,
+      "Flour" : true,
+      "Egg" : true
+    },
+    "Picture" : "bakedChicken.jpg",
+    "Time" : 25
+  },
+  "Cream_of_Mushroom_Chicken" : {
+    "Ingredients" : {
+      "Chicken" : true,
+      "Flour" : true,
+      "Mushroom" : true
+    },
+    "Picture" : "creamOfMushroomChicken.jpg",
+    "Time" : 30
+  },
+  "Chicken_Wings" : {
+    "Ingredients" : {
+      "Chicken" : true,
+      "Flour" : true,
+      "Eggs" : true
+    },
+    "Picture" : "chickenWings.jpg",
+    "Time" : 15
+  },
+  "Grilled_Beef_Steak" : {
+    "Ingredients" : {
+      "Beef" : true
+    },
+    "Picture" : "grilledBeefSteak.jpg",
+    "Time" : 10
+  },
+  "Roast_Beef_Sandwich" : {
+    "Ingredients" : {
+      "Beef" : true,
+      "Bread" : true
+    },
+    "Picture" : "roastBeefSandwich.jpg",
+    "Time" : 5
+  },
+  "Beef_Noodle_Soup" : {
+    "Ingredients" : {
+      "Beef" : true,
+      "Noodles" : true
+    },
+    "Picture" : "beefNoodleSoup.jpg",
+    "Time" : 15
+  },
+  "Beef_Teriyaki" : {
+    "Ingredients" : {
+      "Beef" : true,
+      "Teriyaki_Sauce" : true,
+      "Rice" : true,
+      "Onions" : true
+    },
+    "Picture" : "beefTeriyaki.jpg",
+    "Time" : 10
+  },
+  "Tofu_Veggie_Stir-Fry" : {
+    "Ingredients" : {
+      "Tofu" : true,
+      "Vegetables" : true
+    },
+    "Picture" : "tofuVeggieStirFry.jpg",
+    "Time" : 15
+  },
+  "Tofu_Hot_Pot" : {
+    "Ingredients" : {
+      "Tofu" : true,
+      "Vegetables" : true
+    },
+    "Picture" : "tofuHotPot.jpg",
+    "Time" : 15
+  },
+  "Buddhist_Feast" : {
+    "Ingredients" : {
+      "Tofu" : true,
+      "Vegetables" : true,
+      "Mushrooms" : true,
+      "Noodles" : true,
+      "Rice" : true
+    },
+    "Picture" : "buddhistFeast.jpg",
+    "Time" : 15
+  },
+  "Tofu_on_Rice_with_Soy_Sauce" : {
+    "Ingredients" : {
+      "Tofu" : true,
+      "Rice" : true,
+      "Soy_Sauce" : true
+    },
+    "Picture" : "tofuOnRiceWithSoySauce.jpg",
+    "Time" : 5
+  },
+  "Dill_Baked_Fish" : {
+    "Ingredients" : {
+      "Fish" : true,
+      "Dill" : true
+    },
+    "Picture" : "dillBakedFish.jpg",
+    "Time" : 30
+  },
+  "Fish_and_Chips" : {
+    "Ingredients" : {
+      "Fish" : true,
+      "Dill" : true,
+      "Potatoes" : true
+    },
+    "Picture" : "fishAndChips.jpg",
+    "Time" : 25
+  },
+  "Calamari" : {
+    "Ingredients" : {
+      "Squid" : true,
+      "Flour" : true,
+      "Eggs" : true
+    },
+    "Picture" : "calamari.jpg",
+    "Time" : 10
+  },
+  "Prawn_Tempura" : {
+    "Ingredients" : {
+      "Prawn" : true,
+      "Flour" : true,
+      "Eggs" : true,
+      "Panko" : true
+    },
+    "Picture" : "prawnTempura.jpg",
+    "Time" : 10
+  }
+}
+}
