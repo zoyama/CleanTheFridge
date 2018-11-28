@@ -6,9 +6,9 @@
 			</title>
 			<meta charset="UTF-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link rel="shortcut icon" href='./icon.png' type="image/x-icon" />
+			<link rel="shortcut icon" href='picture/logo.png' type="image/x-icon" />
 			<link rel = "stylesheet" type = "text/css" 
-			href = "CSS/main.css" />
+			href = "./CSS/main.css" />
 			<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 			<script>
 			  // Initialize Firebase
@@ -26,13 +26,7 @@
 			<body>
 				<div class="banner-whole">
 	        <div class="banner">
-          
-         <a href="index.html"> 
 
-            <div class="logo">
-                <img src="picture/logo.png">
-            </div>
-          </a>
 	            <div class="title-text-contain">
 	                <p class="clean-text"> Clean </p>
 	                <p class="title-text"> the </p>
@@ -55,8 +49,7 @@
 				<script>
 					$(document).ready(function() {
 						var body = $("body");
-						var searchResults = ["Baked_Chicken", "Beef_Noodle_Soup", "Calamari", "Chicken Wings"];
-
+						var searchResults = ["Beef_Noodle_Soup", "Calamari", "Beef_Teriyaki", "Chicken_Wings", "Tofu_Hot_Pot", "Prawn+Tempura"];
 						searchResults.forEach(function(element) {
 							var ref = firebase.database().ref("Recipes/"+element);
 								ref.on(
@@ -67,17 +60,10 @@
 										*SNAPS
 										*
 										*/
-										var name = snap.val();
-										var ingre = snap.val().Ingredients;
-										var picURL = snap.val().Picture;
-										var time = snap.val().Time;					
-
-										console.log(ingre);	
-										var ingreString = JSON.stringify(ingre);	
-										console.log(ingreString);
-
-										for (var key in ingre){
-											console.log(key);
+										var name = element.replace(/_/g, " ");
+										var i;
+										for (var key in snap.val().Ingredients){
+											i += key + "<br>";
 										};
 										/*
 										*
@@ -88,29 +74,19 @@
 										var box1 = $("<div></div>");
 										var title = $("<p></p>");
 										var img = $("<img src'' alt='image' />");
-
 										var box2 = $("<div></div>");
-
 										var box3 = $("<div></div>");
 										var box4 = $("<div></div>");
 										var ingred = $("<p></p>");
-
-
-
 										var info = $("<p></p>")										
-
 										/**
 										*
 										*SNAPS INTO ELEMENTS
 										*
 										*/
-										$(title).text(name);
-										//$(ingred).text(ingre);
-										$(img).attr('src', picURL);
-										$(info).text("Step One is...");
-
-
-
+										$(ingred).html(i.substring(9));
+										$(img).attr('src', snap.val().Picture);
+										$(info).text("Time: " + snap.val().Time);
 										/**
 										*
 										*CSS CHANGES
@@ -127,13 +103,13 @@
 										*/
 										$(body).append(container);
 										$(container).prepend(box1);
-										$(box1).append(element);
+										$(box1).append(name);
 										$(container).append(img);
 										$(container).append(box2);
 										$(box2).append(box3);
 										$(box2).append(box4);
 										$(box3).append(info);
-										$(box4).append(ingre);
+										$(box4).append(ingred);
 								})
 								
 							})		
