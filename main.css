@@ -1,4 +1,6 @@
 /** main.css */
+        			@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC');
+
 			html {
         height: 100%;
         background:  rgba(29, 193, 246, 0.1);
@@ -6,7 +8,7 @@
         background-size:cover;
       }
       body {
-          font-family: 'Montserrat';
+          font-family: 'Noto Sans SC';
           font-weight: 600;
           background-attachment: fixed;
                   min-width:1300px;
@@ -173,7 +175,7 @@
           box-shadow: 5px 10px black;
           height: 70px;
           background-color: rgba(29, 193, 246, .5);
-          color: white;
+          color: black;
           display: relative;
       }
       .option:hover {
@@ -258,7 +260,7 @@
           text-align: right;
         } 
         
-        			@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC');
+        			@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC');font-family: 'Noto Sans SC'
 /* 			 for 1280px or less
       @media screen and (min-width:1300px)   { */
       	a {text-decoration: none;}

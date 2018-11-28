@@ -16,6 +16,7 @@
       .banner-whole {
           position: relative;
           margin-bottom: 3em;
+          
       }
       .space {
           height: 30px;
@@ -29,6 +30,7 @@
           background-color: rgba(29, 193, 246, .3);
           margin-top: auto;
           height: 70px;
+              box-shadow: 3px 4px rgba(200,200,200,.5);
 					border-radius:20px;
       }
       .logo {
@@ -68,14 +70,13 @@
       .fridge-text {
           display: inline;
       }
-      .menu-right {
+    /*   .menu-right {
           width: 70px;
           height: 70px;
           background: rgba(0, 0, 0, 0);
           position: relative;
           float: right;
-          /**top: -30px;
-            right:-60%; **/
+  
           color: white;
           border-radius: 10px
       }
@@ -93,7 +94,7 @@
           100% {
               background: rgba(255, 255, 255, .2);
           }
-      }
+      } */
       .content-whole {
           width: 100%;
       }
@@ -106,7 +107,7 @@
           padding-top: 0px;
           justify-content: space-around;
       }
-      .add {
+  .add {
           top: 200px;
           border-radius: 60px;
           width: 280px;
@@ -118,13 +119,13 @@
           display: relative;
           text-shadow: 0px 2px 3px #000000, 5px 6px 0px #01cccc, 7px 5px 0px #00bdbd;
       }
-      .add-text {
-          font-size: 3em;
-          top: 15px;
-          position: relative;
-          display: inline-block;
-          font-weight: bold;
-      }
+     .add-text {
+    font-size: 3em;
+    top: 15px;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+}
       .add-text:hover {
           font-size: 3.1em;
           top: 10px;
@@ -168,12 +169,13 @@
       }
       .option {
           border-radius: 6px;
+              border: 1px solid;
           width: 200px;
           margin: 10px;
           box-shadow: 5px 10px black;
           height: 70px;
           background-color: rgba(29, 193, 246, .5);
-          color: white;
+          color: black;
           display: relative;
       }
       .option:hover {
@@ -194,17 +196,25 @@
       .food-contain {
           display: flex;
           width: 60%;
-          justify-content: space-around;
-      }
+/*           justify-content: space-around;
+ */      }
       .food {
           border-radius: 6px;
           width: 100px;
           margin: 10px;
           box-shadow: 5px 10px white;
           height: 40px;
-          background-color: rgba(0, 199, 129, 0.5);
-          color: white;
-          display: relative;
+    background-color: rgb(0, 105, 68, 0.5);    color: white; 
+    display: relative;
+      }
+            .foodChoose {
+          border-radius: 6px;
+          width: 100px;
+          margin: 10px;
+          box-shadow: 5px 10px white;
+          height: 40px;
+          background-color: rgba(255,255,255,0);
+    color: white;          display: relative;
       }
       .food:hover {
           background-color: rgba(0, 199, 129, 1);
@@ -220,8 +230,8 @@
         position: relative;
         display:flex;
         justify-content:space-evenly;
-				background-color:rgba(0, 0, 255, .3);
-				border-radius:15px;
+    background-color: rgba(156, 156, 255, 0.1);
+    border-radius:15px;
 				padding:10px; 
 				overflow-x: auto;
 				white-space: nowrap;
@@ -231,7 +241,7 @@
           margin:20px;
           width: 300px;
           height:250px;
-					background-color:rgba(0, 0, 255, .3);
+    background-color: rgb(223, 245, 255);
           border: 5px solid black;
           border-radius:10px;
        }
@@ -318,12 +328,15 @@
     float: left;
     /* max-width: 0%; */
     height: 5em;
+    z-index:1000;
     border-radius: 10px;
     margin-right: .3em;
+    border: 2px solid black;
     margin-left: .3em;
+        box-shadow: 5px 10px black;
     padding: 20px;
     min: width;
-    background-color: #C5FFFF;
+    background-color: rgba(156, 156, 255, 0.1);
     min-width: 268px;
     position: fixed;
 }
@@ -340,11 +353,12 @@
           
     float: right;
     width: 967px;
+        box-shadow: 5px 10px black;
     height: 309px;
     border-radius: 10px;
     border: 1px solid black;
     margin-bottom: 3em;
-    background-color: #C5FFFF;
+    background-color: rgba(156, 156, 255, 0.1);
 
 				}
 
@@ -354,6 +368,7 @@
     height: 44px;
     border-radius: 6px;
     /* margin-left: .2em; */
+        box-shadow: 2px 4px black;
     position: relative;
     /* margin-top: .2em; */
     clear: right;
