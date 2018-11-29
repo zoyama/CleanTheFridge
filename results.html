@@ -25,30 +25,19 @@
 		</head>
 			<body>
 				<div class="banner-whole">
-	       <div class="banner">
-				<a href="index.html">
-					<div class="logo">
-						<img src="picture/logo.png">
-						</div>
-					</a>
-					<div class="title-text-contain">
-						<p class="clean-text"> Clean </p>
-						<p class="title-text"> the </p>
-						<p class="fridge-text"> Fridge</p>
+	        <div class="banner">
+	            <div class="logo">
+	                <img src="picture/logo.png" alt="logo">
 	            </div>
-                          <div class="home-contain">
-              <a href="index.html">
-              <div class="home-containword">
-                Home 
-               </div>
-              <div class="home-containimage">
-                <img src="picture/home.png" alt="home-containimage">
-              </div>
-               
-              </a>
+	            <div class="title-text-contain">
+	                <p class="clean-text"> Clean </p>
+	                <p class="title-text"> the </p>
+	                <p class="fridge-text"> Fridge</p>
+	            </div>
 
-            </div>
-
+	            <div class="menu-right">
+	                <img alt="menu" src="picture/menu.png">
+	            </div>
 	        </div>
     		</div>
 				<div id="container1">
@@ -64,8 +53,28 @@
 				</script>
 				<script>
 					$(document).ready(function() {
+						function runSearch() {
+							var queryString = decodeURIComponent(window.location.search);
+
+						  var ingredientList = queryString.split("?");
+
+						  var recipeList =  [];
+
+							// Create a list of recipes called recipeList
+						  var search = firebase.database().ref(ingredientList[1]);
+						    search.on(
+						      "value",
+						      function(snap) {
+						        snap.forEach(function(snapshot) {
+						          recipeList.push(snapshot.key);
+						        });
+						    });
+						    return recipeList;	  
+						    
+						  }						    
 						var body = $("body");
-						var searchResults = ["Beef_Noodle_Soup", "Calamari", "Beef_Teriyaki", "Chicken_Wings", "Tofu_Hot_Pot", "Prawn+Tempura"];
+						var searchResults = ["Tofu_Hot_Pot", "Chicken_Wings", "Chicken_Fried_Rice"];
+						console.log(runSearch());
 						searchResults.forEach(function(element) {
 							var ref = firebase.database().ref("Recipes/"+element);
 								ref.on(
@@ -79,7 +88,7 @@
 										var name = element.replace(/_/g, " ");
 										var i;
 										for (var key in snap.val().Ingredients){
-											i += key + "<br>";
+											i += key.replace(/_/g, " ") + "<br>";
 										};
 										/*
 										*
@@ -88,13 +97,12 @@
 										*/
 										var container = $("<div></div>");
 										var box1 = $("<div></div>");
-										var title = $("<p></p>");
 										var img = $("<img src'' alt='image' />");
 										var box2 = $("<div></div>");
 										var box3 = $("<div></div>");
 										var box4 = $("<div></div>");
 										var ingred = $("<p></p>");
-										var info = $("<p></p>")										
+										var info = $("<p></p>")						
 										/**
 										*
 										*SNAPS INTO ELEMENTS
@@ -102,7 +110,9 @@
 										*/
 										$(ingred).html(i.substring(9));
 										$(img).attr('src', snap.val().Picture);
-										$(info).text("Time: " + snap.val().Time);
+										$(info).html("Prep Time: " + snap.val().Prep_Time
+											+ " mins<br>" + "Cook Time: " + snap.val().Cook_Time + " mins<br>");
+
 										/**
 										*
 										*CSS CHANGES
