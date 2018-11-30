@@ -53,41 +53,23 @@
 				</script>
 				<script>
 					$(document).ready(function() {
-						function runSearch() {
-							var queryString = decodeURIComponent(window.location.search);
-
-						  var ingredientList = queryString.split("?");
-
-						  var recipeList =  [];
-
-							// Create a list of recipes called recipeList
-						  var search = firebase.database().ref(ingredientList[1]);
-						    search.on(
-						      "value",
-						      function(snap) {
-						        snap.forEach(function(snapshot) {
-						          recipeList.push(snapshot.key);
-						        });
-						    });
-						    return recipeList;	  
-						    
-						  }						    
-						var body = $("body");
-						var searchResults = ["Tofu_Hot_Pot", "Chicken_Wings", "Chicken_Fried_Rice"];
-						console.log(runSearch());
-						searchResults.forEach(function(element) {
-							var ref = firebase.database().ref("Recipes/"+element);
-								ref.on(
-									"value",
-									function(snap) {
-										/**
-										*
-										*SNAPS
-										*
-										*/
-										var name = element.replace(/_/g, " ");
+								var body = $("body");
+								var queryString = decodeURIComponent(window.location.search);
+							  var ingredientList = queryString.split("?");
+								// Create a list of recipes called recipeList
+							  var search = firebase.database().ref(ingredientList[1]);
+							    search.on(
+							      "value",
+							      function(snap) {
+							        snap.forEach(function(snapshot) {
+							        	console.log(snapshot.key);
+													var ref = firebase.database().ref("Recipes/"+ snapshot.key);
+														ref.on(
+															"value",
+															function(snap2) {
+																var name = snapshot.key.replace(/_/g, " ");
 										var i;
-										for (var key in snap.val().Ingredients){
+										for (var key in snap2.val().Ingredients){
 											i += key.replace(/_/g, " ") + "<br>";
 										};
 										/*
@@ -105,14 +87,13 @@
 										var info = $("<p></p>")						
 										/**
 										*
-										*SNAPS INTO ELEMENTS
+										*snap2S INTO ELEMENTS
 										*
 										*/
 										$(ingred).html(i.substring(9));
-										$(img).attr('src', snap.val().Picture);
-										$(info).html("Prep Time: " + snap.val().Prep_Time
-											+ " mins<br>" + "Cook Time: " + snap.val().Cook_Time + " mins<br>");
-
+										$(img).attr('src', snap2.val().Picture);
+										$(info).html("Prep Time: " + snap2.val().Prep_Time
+											+ " mins<br>" + "Cook Time: " + snap2.val().Cook_Time + " mins<br>");
 										/**
 										*
 										*CSS CHANGES
@@ -136,10 +117,10 @@
 										$(box2).append(box4);
 										$(box3).append(info);
 										$(box4).append(ingred);
-								})
-								
-							})		
-		      });			
+															})
+														})
+						        	})
+						  		});  				
 				</script>
 		</body>
 	</html>
