@@ -331,81 +331,81 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
     /*<![CDATA[*/
-$(document).ready(function() {
-    var optionshow = false;
-    $(".option").show();
-    $("#chicken, #beef,#tofu, #seafood, #egg").hide();
-    $("#flour, #bread, #noodles, #panko").hide();
-    $("#cheese, #milk, #yogurt").hide();
-    $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
-    $("#brocolli, #onion, #mushroom,#dill").hide();
-    //
-    var proteinShow = false;
-    $("#protein").click(function(event) {
-        if (!proteinShow) {
-            proteinShow = true;
-            $("#chicken, #beef, #tofu, #seafood, #egg").show();
-        } else {
-            proteinShow = false;
-            $("#chicken, #beef, #tofu, #seafood, #egg").hide();
-        }
-    });
-    /////////////////
-    var grainShow = false;
-    $("#grain").click(function(event) {
-        if (!grainShow) {
-            grainShow = true;
-            $("#flour, #bread, #noodles, #panko").show();
-        } else {
-            grainShow = false;
-            $("#flour, #bread, #noodles, #panko").hide();
-        }
-    });
-    /////////////////
-    var dairyShow = false;
-    $("#dairy").click(function(event) {
-        if (!dairyShow) {
-            dairyShow = true;
-            $("#cheese, #milk, #yogurt").show();
-        } else {
-            dairyShow = false;
-            $("#cheese, #milk, #yogurt").hide();
-        }
-    });
-    ///
-    var sauceShow = false;
-    $("#sauces").click(function(event) {
-        if (!sauceShow) {
-            sauceShow = true;
-            $("#teriyakiSauce, #jam, #soySauce,#butter").show();
-        } else {
-            sauceShow = false;
-            $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
-        }
-    });
-    var sauceShow = false;
-    $("#sauce").click(function(event) {
-        if (!sauceShow) {
-            sauceShow = true;
-            $("#teriyakiSauce, #jam, #soySauce,#butter").show();
-        } else {
-            sauceShow = false;
-            $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
-        }
-    });
-    ///////////////
-    var fvShow = false;
-    $("#fv").click(function(event) {
-        if (!fvShow) {
-            fvShow = true;
-            $("#brocolli, #onion, #mushroom,#dill").show();
-        } else {
-            fvShow = false;
-            $("#brocolli, #onion, #mushroom,#dill").hide();
-        }
-    });
- 
-    /* this is for if we want perhaps one or more ??? 
+    $(document).ready(function() {
+        var optionshow = false;
+        $(".option").show();
+        $("#chicken, #beef,#tofu, #seafood, #egg").hide();
+        $("#flour, #bread, #noodles, #panko").hide();
+        $("#cheese, #milk, #yogurt").hide();
+        $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
+        $("#brocolli, #onion, #mushroom,#dill").hide();
+        //
+        var proteinShow = false;
+        $("#protein").click(function(event) {
+            if (!proteinShow) {
+                proteinShow = true;
+                $("#chicken, #beef, #tofu, #seafood, #egg").show();
+            } else {
+                proteinShow = false;
+                $("#chicken, #beef, #tofu, #seafood, #egg").hide();
+            }
+        });
+        /////////////////
+        var grainShow = false;
+        $("#grain").click(function(event) {
+            if (!grainShow) {
+                grainShow = true;
+                $("#flour, #bread, #noodles, #panko").show();
+            } else {
+                grainShow = false;
+                $("#flour, #bread, #noodles, #panko").hide();
+            }
+        });
+        /////////////////
+        var dairyShow = false;
+        $("#dairy").click(function(event) {
+            if (!dairyShow) {
+                dairyShow = true;
+                $("#cheese, #milk, #yogurt").show();
+            } else {
+                dairyShow = false;
+                $("#cheese, #milk, #yogurt").hide();
+            }
+        });
+        ///
+        var sauceShow = false;
+        $("#sauces").click(function(event) {
+            if (!sauceShow) {
+                sauceShow = true;
+                $("#teriyakiSauce, #jam, #soySauce,#butter").show();
+            } else {
+                sauceShow = false;
+                $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
+            }
+        });
+        var sauceShow = false;
+        $("#sauce").click(function(event) {
+            if (!sauceShow) {
+                sauceShow = true;
+                $("#teriyakiSauce, #jam, #soySauce,#butter").show();
+            } else {
+                sauceShow = false;
+                $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
+            }
+        });
+        ///////////////
+        var fvShow = false;
+        $("#fv").click(function(event) {
+            if (!fvShow) {
+                fvShow = true;
+                $("#brocolli, #onion, #mushroom,#dill").show();
+            } else {
+                fvShow = false;
+                $("#brocolli, #onion, #mushroom,#dill").hide();
+            }
+        });
+
+        /* this is for if we want perhaps one or more ??? 
     var isClicked = false; 
     function clickAndAdd(id, index) {
       //console.log("func: " + isClicked);
@@ -424,54 +424,54 @@ $(document).ready(function() {
       });
     }
 */
-    var isFirstClick = true;
-    var prevIndex;
-    var prevID;
-    function clickAndSwitch(id, index){ 
-     $(id).click(function(event) {
-        if (isFirstClick) { 
-          $(id).css("background-color", "black");
-          prevIndex = index;
-          prevID = id;
-          isFirstClick = false;
+        var isFirstClick = true;
+        var prevIndex;
+        var prevID;
+
+        function clickAndSwitch(id, index) {
+            $(id).click(function(event) {
+                if (isFirstClick) {
+                    $(id).css("background-color", "black");
+                    prevIndex = index;
+                    prevID = id;
+                    isFirstClick = false;
+                } else if (!isFirstClick) {
+                    $(prevID).css("background-color", "rgba(0, 199, 129, 0.5)");
+
+                    prevIndex = index;
+                    prevID = id;
+                    $(id).css("background-color", "black");
+                }
+            });
         }
-        else if (!isFirstClick) {
-          $(prevID).css("background-color", "rgba(0, 199, 129, 0.5)");
-          
-          prevIndex = index;
-          prevID = id;
-          $(id).css("background-color", "black");
-        }
-     });
-    }
-   clickAndSwitch("#chicken", 0);
-   clickAndSwitch("#beef", 1);
-    clickAndSwitch("#tofu", 2);
-    clickAndSwitch("#seafood", 3)
-    clickAndSwitch("#egg", 4);
-    clickAndSwitch("#flour", 5);
-    clickAndSwitch("#bread", 6);
-    clickAndSwitch("#noodles", 7);
-    clickAndSwitch("#panko", 8); 
-    clickAndSwitch("#cheese", 9);
-    clickAndSwitch("#milk", 10); 
-    clickAndSwitch("#yogurt",11);
-    clickAndSwitch("#teriyakiSauce", 12);
-    clickAndSwitch("#jam", 13);
-    clickAndSwitch("#soySauce", 14);
-    clickAndSwitch("#butter", 15);
-    clickAndSwitch("#brocolli", 16);
-    clickAndSwitch("#onion", 17);
-    clickAndSwitch("#mushroom",18);
-    clickAndSwitch("#dill", 19);
-    $("#searchText").click(function(event) {
-      if (prevID == undefined) {
-        alert("No coffee selected");
-      }
-      var query = prevID.substring(1); 
-      window.location.href = "results.html?" + query;
+        clickAndSwitch("#chicken", 0);
+        clickAndSwitch("#beef", 1);
+        clickAndSwitch("#tofu", 2);
+        clickAndSwitch("#seafood", 3)
+        clickAndSwitch("#egg", 4);
+        clickAndSwitch("#flour", 5);
+        clickAndSwitch("#bread", 6);
+        clickAndSwitch("#noodles", 7);
+        clickAndSwitch("#panko", 8);
+        clickAndSwitch("#cheese", 9);
+        clickAndSwitch("#milk", 10);
+        clickAndSwitch("#yogurt", 11);
+        clickAndSwitch("#teriyakiSauce", 12);
+        clickAndSwitch("#jam", 13);
+        clickAndSwitch("#soySauce", 14);
+        clickAndSwitch("#butter", 15);
+        clickAndSwitch("#brocolli", 16);
+        clickAndSwitch("#onion", 17);
+        clickAndSwitch("#mushroom", 18);
+        clickAndSwitch("#dill", 19);
+        $("#searchText").click(function(event) {
+            if (prevID == undefined) {
+                alert("No coffee selected");
+            }
+            var query = prevID[1].toUpperCase() + prevID.substring(2);
+            window.location.href = "results.html?" + query;
+        });
     });
-});
     /*]]>*/
   </script>
 	</body>
