@@ -44,7 +44,7 @@
 					<section>
 						<h4 id="ingre"> Selected Ingredient: </h4>
 						<ul>
-							<li> Milk </li>
+							<li id="select"> Milk </li>
 						</ul>
 					</section>
 				</div>	
@@ -84,7 +84,8 @@
 										var box3 = $("<div></div>");
 										var box4 = $("<div></div>");
 										var ingred = $("<p></p>");
-										var info = $("<p></p>")						
+										var info = $("<p></p>")
+										$("#select").text(ingredientList[1]);						
 										/**
 										*
 										*snap2S INTO ELEMENTS
