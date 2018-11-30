@@ -65,7 +65,7 @@
 				<script>
 					$(document).ready(function() {
 						var body = $("body");
-						var searchResults = ["Beef_Noodle_Soup", "Calamari", "Beef_Teriyaki", "Chicken_Wings", "Tofu_Hot_Pot", "Prawn+Tempura"];
+						var searchResults = ["Beef_Noodle_Soup", "Calamari", "Beef_Teriyaki", "Chicken_Wings", "Tofu_Hot_Pot", "Prawn_Tempura"];
 						searchResults.forEach(function(element) {
 							var ref = firebase.database().ref("Recipes/"+element);
 								ref.on(
