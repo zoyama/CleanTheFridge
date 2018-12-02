@@ -34,17 +34,28 @@
 	                <p class="title-text"> the </p>
 	                <p class="fridge-text"> Fridge</p>
 	            </div>
+              
+              <div class="home-contain">
+              <a href="index.html">
+              <div class="home-containword">
+                Home 
+               </div>
+              <div class="home-containimage">
+                <img src="picture/home.png" alt="home-containimage">
+              </div>
+               
+              </a>
 
-	            <div class="menu-right">
-	                <img alt="menu" src="picture/menu.png">
-	            </div>
+            </div>
+
+	           
 	        </div>
     		</div>
 				<div id="container1">
 					<section>
 						<h4 id="ingre"> Selected Ingredient: </h4>
 						<ul>
-							<li id="select"> Milk </li>
+							<li id="select">  </li>
 						</ul>
 					</section>
 				</div>	
@@ -78,14 +89,15 @@
 										*
 										*/
 										var container = $("<div></div>");
-										var box1 = $("<div id='" + snap2.key +"'></div>");
+                    var box0 = $("<div></div>");
+										var box1 = $("<a href='recipeinfo.html?" + snap2.key +"' />");
 										var img = $("<img src'' alt='image' />");
 										var box2 = $("<div></div>");
 										var box3 = $("<div></div>");
 										var box4 = $("<div></div>");
 										var ingred = $("<p></p>");
 										var info = $("<p></p>")
-										$("#select").text(ingredientList[1]);						
+										$("#select").text(ingredientList[1].replace(/_/g, " "));						
 										/**
 										*
 										*snap2S INTO ELEMENTS
@@ -101,7 +113,7 @@
 										*
 										*/								
 										$(container).addClass("container2");
-										$(box1).addClass("recipetitle");
+										$(box0).addClass("recipetitle");
 										$(box3).addClass("recipeinfo");
 										$(box4).addClass("ingredients");
 										$(img).addClass("image");
@@ -110,7 +122,8 @@
 										*
 										*/
 										$(body).append(container);
-										$(container).prepend(box1);
+										$(container).prepend(box0);
+                    $(box0).append(box1);
 										$(box1).append(name);
 										$(container).append(img);
 										$(container).append(box2);
@@ -122,8 +135,10 @@
 														})
 						        	})
 							    var query = prevID.substring(1); 
-      						window.location.href = "index.html?" + query;
-						  		});  				
+      						window.location.href = "recipeinfo.html?" + query;
+						  		});  
+
+                    
 				</script>
 		</body>
 	</html>
