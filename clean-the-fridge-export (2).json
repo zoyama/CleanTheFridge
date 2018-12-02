@@ -147,7 +147,7 @@
       "Cook_Time" : 5,
       "Ingredients" : {
         "Bread" : true,
-        "Jam" : true,
+        "Jam" : true
       },
       "Picture" : "https://i2.wp.com/kitchenarchives.com/wp-content/uploads/2017/06/Mulberry-Jam-Sandwich-Cropped.jpg?resize=680%2C427",
       "Prep_Time" : 15,
