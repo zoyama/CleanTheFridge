@@ -1,0 +1,557 @@
+/** main.css */
+        			@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC');
+
+			html {
+        height: 100%;
+        background:  rgba(29, 193, 246, 0.1);
+        background-repeat:repeat;
+        background-size:cover;
+      }
+      body {
+          font-family: 'Noto Sans SC';
+          font-weight: 600;
+          background-attachment: fixed;
+                  min-width:1300px;
+                  max-width:1301px;
+                  cursor:arrow;
+
+      }
+      a {text-decoration: none;
+      color:black;
+      }
+      .banner-whole {
+          position: relative;
+          margin-bottom: 3em;
+      }
+      .space {
+          height: 30px;
+      }
+      .banner {
+          text-align: center;
+          position: relative;
+          text-align: center;
+          width: 100%;
+          padding: 0px, 0px, 10px, 0px;
+          background-color: rgba(29, 193, 246, .3);
+          margin-top: auto;
+          height: 70px;
+					border-radius:20px;
+      }
+      .logo {
+          top: 0px;
+          left: 40px;
+          right: calc(100%-30px);
+          position: absolute;
+      }
+      .logo img {
+          width: 70px;
+          height: 70px;
+          border-radius: 35%;
+      }
+
+      .title-text-contain {
+          width: -1%;
+          margin-top: 30px;
+          margin-left: auto;
+          margin-right: auto;
+          display: inline;
+          color: white;
+          font-size: 2em;
+          color: black;
+          left: 130px;
+          top: -13px;
+          text-shadow: 2px 1px 0px #fff, 3px 2px 0px rgba(0, 0, 0, 0.15);
+          position: absolute;
+          font-weight: 500;
+      }
+      .title-text {
+          letter-spacing: 0px;
+          display: inline;
+      }
+      .clean-text {
+          display: inline;
+      }
+      .fridge-text {
+          display: inline;
+      }
+      .menu-right {
+          width: 70px;
+          height: 70px;
+          background: rgba(0, 0, 0, 0);
+          position: relative;
+          float: right;
+          /**top: -30px;
+            right:-60%; **/
+          color: white;
+          border-radius: 10px
+      }
+      .menu-right img {
+          width: 70px;
+          height: 70px;
+      }
+      .menu-right:hover {
+          background: rgba(255, 255, 255, 0.4);
+      }
+      @keyframes darken {
+          0% {
+              background: rgba(0, 0, 0, 0);
+          }
+          100% {
+              background: rgba(255, 255, 255, .2);
+          }
+      }
+      .content-whole {
+          width: 100%;
+      }
+      .content {
+          position: relative;
+          text-align: center;
+      }
+      .add-contain {
+          display: flex;
+          padding-top: 0px;
+          justify-content: space-around;
+      }
+      .add {
+          top: 200px;
+          border-radius: 60px;
+          width: 280px;
+          font-weight: bold;
+          height: 100px;
+          background-color: rgba(51, 204, 51, 0);
+          color: white;
+          font-style: italic;
+          display: relative;
+          text-shadow: 0px 2px 3px #000000, 5px 6px 0px #01cccc, 7px 5px 0px #00bdbd;
+      }
+      .add-text {
+          font-size: 3em;
+          top: 15px;
+          position: relative;
+          display: inline-block;
+          font-weight: bold;
+      }
+      .add-text:hover {
+          font-size: 3.1em;
+          top: 10px;
+      }
+      .ingredient-box-contain {
+          width: 80%;
+          padding: 10px;
+          border: 5px solid rgba(0, 0, 0, 0);
+          width: 95%;
+          height: 50px;
+          display: flex;
+      }
+      .ingredient-box {
+          border-radius: 6px;
+          width: 200px;
+          margin: 10px;
+          box-shadow: 5px 10px black;
+          height: 70px;
+          background-color: rgba(0, 0, 129, 0.5);
+          color: white;
+          display: relative;
+          height: 33px;
+          border: 1px solid rgba(0, 0, 0, 0.5);
+          background: rgba(255, 255, 255, 0.2);
+          padding: 10px;
+      }
+      .ingredient-box-text {
+          font-size: 1em;
+          display: inline-block;
+      }
+      .ingredient-box:hover {
+          background-color: rgba(255, 0, 0, 1);
+      }
+      .option-contain {
+          display: flex;
+          padding-top: 30px;
+          flex-direction: column;
+          justify-content: space-around;
+          height: 485px;
+      }
+      .option {
+          border-radius: 6px;
+          width: 200px;
+          margin: 10px;
+          box-shadow: 5px 10px black;
+          height: 70px;
+          background-color: rgba(29, 193, 246, .5);
+          color: black;
+          display: relative;
+      }
+      .option:hover {
+          background-color: rgba(29, 193, 246, 1);
+      }
+      .option-text {
+          font-weight: bold;
+          font-size: 1.5em;
+          top: 15px;
+          position: relative;
+          display: inline-block;
+      }
+      .option-food-contain {
+          display: flex;
+          width: 100%;
+          justify-content: flex-start;
+      }
+      .food-contain {
+          display: flex;
+          width: 60%;
+      }
+      .food {
+          border-radius: 6px;
+          width: 100px;
+          margin: 10px;
+          box-shadow: 5px 10px white;
+          height: 40px;
+          background-color: rgba(0, 199, 129, 0.5);
+          color: white;
+          display: relative;
+      }
+      .food:hover {
+          background-color: rgba(0, 199, 129, 1);
+      }
+      .food-text {
+          font-weight: bold;
+          font-size: 1em;
+          top: 15px;
+          position: relative;
+          display: inline-block;
+      }
+      .recipe-gallery {
+        position: relative;
+        display:flex;
+        justify-content:space-evenly;
+				background-color:rgba(0, 0, 255, .3);
+				border-radius:15px;
+				padding:10px; 
+				overflow-x: auto;
+				white-space: nowrap;
+            margin: 17px;
+       }
+    
+      .recipe-container {
+          margin:20px;
+          width: 350px;
+
+          height:300px;
+					background-color:rgba(0, 0, 255, .3);
+          border: 5px solid black;
+          border-radius:10px;
+       }
+        
+       .recipe-image img {
+	        width:350px;
+	        height:200px;
+        }
+
+        .recipe-text-container { 
+          width:100%;
+          display:inline-block;
+        }
+
+       .recipe-title {
+          font-size:1.4em;
+          font-color: blue;
+          text-align: left;
+        }
+
+        .recipe-description {
+          font-size:.8em;
+          font-color:black;
+          text-align: right;
+        } 
+        
+                .home-contain {
+          float:right;
+          font-color:black;
+          text-align: right;
+          display:block;          
+          width:160px;
+          
+         padding: 10px 10px 0px 0px; 
+        } 
+        .home-containimage img{
+        width:50px;
+        height:50px;
+
+        float:right;
+        }
+        .home-containword {
+        text-align: center;
+        font-size:1.7em;
+        margin-top:5px;
+        float:left;
+        text-decoration: none;
+        width:100px
+        }
+         .home-contain a {
+     
+        text-decoration: none;
+        }
+        
+        
+        			@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC');font-family: 'Noto Sans SC'
+/* 			 for 1280px or less
+      @media screen and (min-width:1300px)   { */
+      	a {text-decoration: none;}
+				body {margin: 0 auto; max-width: 1000px; background-color: #ECF4F6; font-family: 'Noto Sans SC', sans-serif;}
+				p {margin: 0%; font-size: 0.9em;}
+				ul {padding-inline-start: 10px; margin-bottom: .2em;}
+				li {margin-inline-start: 3em; 				padding-left: .2em;}
+				input {position: relative; top: 2px;}
+				section {margin-bottom: 3em;}
+
+				#selected + ul {
+					list-style-type: none;
+					padding-inline-start: 0px;
+					font-size: 0.9em;
+				}
+
+				div + p {
+					margin: 0%;
+				}
+
+				.ss {
+					border-right: 1px solid;
+	    		border-top: 1px solid;
+	    		border-left: 1px solid;
+	    		border-radius: 4px 4px 0px 0px;
+	    		background-color: white;
+				}
+
+				.s{
+					border-right: 1px solid;
+	    		border-bottom: 1px solid;
+	    		border-left: 1px solid;
+				}
+
+				#s {
+					background-color: white;
+					border-radius: 0px 0px 4px 4px;
+					padding: .7em;
+					margin-bottom: .6em;
+				}
+
+				header {
+					margin: 0 auto;
+					width: 96.5%;
+					border: 3px solid black;
+					height: 50px;
+					padding-left: .3em;
+					padding-top: 3em;
+					margin-bottom: .4em;
+				}
+
+				#navbar {
+					background-color: white;
+				}
+
+				#container1 {
+                    box-shadow: 5px 10px black;
+
+    float: left;
+    /* max-width: 0%; */
+    height: 5em;
+    border-radius: 10px;
+    margin-right: .3em;
+        border: 2px solid;
+    margin-left: .3em;
+    padding: 20px;
+    min: width;
+    background-color: #C5FFFF;
+    min-width: 268px;
+    position: fixed;
+}
+
+				#ingre {
+					display: inline;
+				}
+
+				#selected {
+					display: inline;
+				}
+
+				.container2 {
+          
+    float: right;
+    width: 967px;
+    height: 309px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 3em;
+    background-color: #C5FFFF;
+              box-shadow: 5px 10px black;
+
+
+				}
+
+				.recipetitle {
+    width: 893px;
+    font-size: 2em;
+    height: 44px;
+    border-radius: 6px;
+    /* margin-left: .2em; */
+    position: relative;
+    /* margin-top: .2em; */
+    clear: right;
+    /* margin: 1.3em; */
+    margin: 23px;
+    padding: 9px 0px 1px 14px;
+    background-color: white;
+    border: 1px solid black;
+				}
+
+				.recipeinfo {
+    border-radius: 10px;
+    width: 270px;
+    height: 169px;
+    /* text-align: center; */
+    float: left;
+    padding-left: 15px;
+    padding-top: 14px;
+    font-size: 25px;
+    margin-left: 1.0em;
+    background-color: white;
+    border: 1px solid black;
+				}
+
+				.ingredients {
+    border-radius: 10px;
+    width: 270px;
+    height: 172px;
+    /* text-align: center; */
+    float: left;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 20px;
+    margin-left: 1.0em;
+    background-color: white;
+    border: 1px solid black;
+				}
+
+				.image {
+    width: 280px;
+    height: 180px;
+    float: left;
+    margin-left: 1.2em;
+
+    border: 2px solid black;
+    border-radius: 11px;
+				}
+
+				#filter {
+					float:left;
+					width: 20%;
+					height: 300px;
+					border-radius: 10px;
+					margin-right: 3em;
+					clear: left;
+				}
+
+				#scrollbar {
+					float: right;
+					width: .2em;
+					height: 800px;
+					background-color: red;
+				}
+
+      
+      .rwhole{
+        width:100%;
+        height:auto;
+        display:flex;
+       
+      }
+      
+      .rdiv1 {
+        width:50%;
+      }
+      
+      .rimagecontain {
+        margin:10px;
+        
+        
+      }
+      .rimage {
+        border-width:10px;
+        
+      }
+      .rimage img {
+      width:600px;
+              border-radius:10px;
+              border:3px solid;
+
+      }
+      
+      .prepcookcontain {
+            width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 231px;
+      }
+      
+      
+      .rprepcontain{
+          height: 56px;
+    display: flex;
+    justify-content: left;
+      }
+      
+      .mintext {
+        font-size:26pt;
+        margin:10px;
+      }
+     
+     
+      
+      .rdiv2 {
+        width:50%;
+      }
+      
+      .rnamecontain{
+      height: 73px;
+      display:block;
+      }
+      .rnamecontain p {
+      font-size:3em;
+      }
+      
+      .rstepcontain {
+      display:flex;
+      width:100%;
+      flex-direction: column;
+      margin-top:10px;
+      }
+      .rstep{
+width: 100%;
+    margin-top: 58px;      }
+      .rstepnumber{
+          width: 10%;
+    font-size: 3em;
+    float: left;
+      }
+   .rstepnumber p {
+      float:left;
+      }
+      .rstepinstruction {
+    width: 75%;
+    font-size: 1.7em;
+    float: left;
+      }
+      
+      .ringredientcontain {
+        width:100%;
+      }
+      .ringredientcontain p {
+      font-size:40pt;
+      }
+      
+       ul.ringredient{
+        
+        font-size:20pt;
+      }
+      
+      

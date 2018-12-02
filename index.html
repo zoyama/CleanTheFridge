@@ -48,59 +48,6 @@
     </div>
     <!-- asdfasdf stuff stuff ends the header end end end-->
     <!--  asdf -->
-<div class="recipe-gallery">
- 
-
-    <div class="recipe-container">
-          <div class="recipe-image">
-            <img src="picture/creamofmushroom.jpg" alt="creamofmushroom">
-          </div>
-          
-          <div class="recipe-text-container">
-              <div class="recipe-title">
-                Cream of Mushroom
-              </div>
-              <div class="recipe-description">
-                Yummy Cream of Mushroom in your tummy wummy.
-              </div>
-          </div>
-      </div>
-
-
-        <div class="recipe-container">
-          <div class="recipe-image">
-            <img src="picture/dillbakedfish.jpg" alt="dill baked fish">
-          </div>
-          
-          <div class="recipe-text-container">
-              <div class="recipe-title">
-                Dill Baked Fish
-              </div>
-              <div class="recipe-description">
-                Dill baked fish in your tummy wummy.
-              </div>
-          </div>
-      </div>
-            
-
-        <div class="recipe-container">
-          <div class="recipe-image">
-            <img src="picture/fishandchips.jpg" alt="fish and chips">
-          </div>
-          
-          <div class="recipe-text-container">
-              <div class="recipe-title">
-                Fish and Chips
-              </div>
-              <div class="recipe-description">
-               Fish and chips in your tummy wummy.
-              </div>
-          </div>
-      </div>
-            
-
-
-</div>
 
 
 
@@ -253,8 +200,8 @@
                     <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
 
                     <div class="food-contain">
-                        <div class="food" id="teriyakiSauce">
-                            <div class="food-text" id="teriyakiSauce">
+                        <div class="food" id="teriyaki_Sauce">
+                            <div class="food-text" id="teriyaki_Sauce">
                                 Teriyaki sauce
                             </div>
                         </div>
@@ -265,7 +212,7 @@
                             </div>
                         </div>
 
-                        <div class="food" id="soySauce">
+                        <div class="food" id="soy_Sauce">
                             <div class="food-text">
                                 Soy Sauce
                             </div>
@@ -291,7 +238,7 @@
                     <!-- asdfasdfasdffffffffffffffffffffffffffffffffffffffffffffffff-->
 
                     <div class="food-contain">
-                        <div class="food" id="brocolli">
+                        <div class="food" id="broccoli">
                             <div class="food-text">
                                 Broccoli
                             </div>
@@ -326,6 +273,52 @@
 </div>
 
 
+<div class="recipe-gallery">
+ 
+
+    <div class="recipe-container">
+          <div class="recipe-image">
+            <img src="picture/click_1.jpg" alt="click">
+          </div>
+          
+          <div class="recipe-text-container">
+              <div class="recipe-title">
+                Click a subcategory of the food!
+              </div>
+              <div class="recipe-description">
+              </div>
+          </div>
+      </div>
+
+
+        <div class="recipe-container">
+          <div class="recipe-image">
+            <img src="picture/click_ingredient.jpg" alt="dill baked fish">
+          </div>
+          
+          <div class="recipe-text-container">
+              <div class="recipe-title">
+Click a single ingredient!              </div>
+
+          </div>
+      </div>
+            
+
+        <div class="recipe-container">
+          <div class="recipe-image">
+            <img src="picture/add.jpg" alt="fish and chips">
+          </div>
+          
+          <div class="recipe-text-container">
+              <div class="recipe-title">
+Click Add!              </div>
+
+          </div>
+      </div>
+            
+
+
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -337,8 +330,8 @@
         $("#chicken, #beef,#tofu, #seafood, #egg").hide();
         $("#flour, #bread, #noodles, #panko").hide();
         $("#cheese, #milk, #yogurt").hide();
-        $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
-        $("#brocolli, #onion, #mushroom,#dill").hide();
+        $("#teriyaki_Sauce, #jam, #soy_Sauce,#butter").hide();
+        $("#broccoli, #onion, #mushroom,#dill").hide();
         //
         var proteinShow = false;
         $("#protein").click(function(event) {
@@ -377,20 +370,20 @@
         $("#sauces").click(function(event) {
             if (!sauceShow) {
                 sauceShow = true;
-                $("#teriyakiSauce, #jam, #soySauce,#butter").show();
+                $("#teriyaki_Sauce, #jam, #soy_Sauce,#butter").show();
             } else {
                 sauceShow = false;
-                $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
+                $("#teriyaki_Sauce, #jam, #soy_Sauce,#butter").hide();
             }
         });
         var sauceShow = false;
         $("#sauce").click(function(event) {
             if (!sauceShow) {
                 sauceShow = true;
-                $("#teriyakiSauce, #jam, #soySauce,#butter").show();
+                $("#teriyaki_Sauce, #jam, #soy_Sauce,#butter").show();
             } else {
                 sauceShow = false;
-                $("#teriyakiSauce, #jam, #soySauce,#butter").hide();
+                $("#teriyaki_Sauce, #jam, #soy_Sauce,#butter").hide();
             }
         });
         ///////////////
@@ -398,10 +391,10 @@
         $("#fv").click(function(event) {
             if (!fvShow) {
                 fvShow = true;
-                $("#brocolli, #onion, #mushroom,#dill").show();
+                $("#broccoli, #onion, #mushroom,#dill").show();
             } else {
                 fvShow = false;
-                $("#brocolli, #onion, #mushroom,#dill").hide();
+                $("#broccoli, #onion, #mushroom,#dill").hide();
             }
         });
 
@@ -456,17 +449,17 @@
         clickAndSwitch("#cheese", 9);
         clickAndSwitch("#milk", 10);
         clickAndSwitch("#yogurt", 11);
-        clickAndSwitch("#teriyakiSauce", 12);
+        clickAndSwitch("#teriyaki_Sauce", 12);
         clickAndSwitch("#jam", 13);
-        clickAndSwitch("#soySauce", 14);
+        clickAndSwitch("#soy_Sauce", 14);
         clickAndSwitch("#butter", 15);
-        clickAndSwitch("#brocolli", 16);
+        clickAndSwitch("#broccoli", 16);
         clickAndSwitch("#onion", 17);
         clickAndSwitch("#mushroom", 18);
         clickAndSwitch("#dill", 19);
         $("#searchText").click(function(event) {
             if (prevID == undefined) {
-                alert("No coffee selected");
+                alert("No ingredient selected");
             }
             var query = prevID[1].toUpperCase() + prevID.substring(2);
             window.location.href = "results.html?" + query;
