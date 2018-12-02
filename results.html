@@ -35,28 +35,16 @@
 	                <p class="fridge-text"> Fridge</p>
 	            </div>
 
-	             <div class="home-contain">
-              <a href="index.html">
-              <div class="home-containword">
-                Home 
-               </div>
-              <div class="home-containimage">
-                <img src="picture/home.png" alt="home-containimage">
-              </div>
-               
-              </a>
-
-            </div>
+	            <div class="menu-right">
+	                <img alt="menu" src="picture/menu.png">
+	            </div>
 	        </div>
     		</div>
-       
 				<div id="container1">
 					<section>
 						<h4 id="ingre"> Selected Ingredient: </h4>
 						<ul>
-             <a href="recipe.html">
 							<li id="select"> Milk </li>
-              </a>
 						</ul>
 					</section>
 				</div>	
@@ -75,7 +63,7 @@
 							      function(snap) {
 							        snap.forEach(function(snapshot) {
 							        	console.log(snapshot.key);
-													var ref = firebase.database().ref("Recipes/"+ snapshot.key);
+													var ref = firebase.database().ref("Recipes/" + snapshot.key);
 														ref.on(
 															"value",
 															function(snap2) {
@@ -90,7 +78,7 @@
 										*
 										*/
 										var container = $("<div></div>");
-										var box1 = $("<div></div>");
+										var box1 = $("<div id='" + snap2.key +"'></div>");
 										var img = $("<img src'' alt='image' />");
 										var box2 = $("<div></div>");
 										var box3 = $("<div></div>");
@@ -133,6 +121,8 @@
 															})
 														})
 						        	})
+							    var query = prevID.substring(1); 
+      						window.location.href = "index.html?" + query;
 						  		});  				
 				</script>
 		</body>
