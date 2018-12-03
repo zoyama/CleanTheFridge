@@ -3,7 +3,8 @@
 	<head>
 		<title> 
           Clean the Fridge 
-        </title>
+     </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8" />
 		<link rel="shortcut icon" href='./icon.png' type="image/x-icon" />
 		<link rel = "stylesheet" type = "text/css" 
@@ -91,9 +92,6 @@
             
 					</div>
 					<div class="rdiv2">
-
-                                                                        <!-- FIREBASE!!!!! FOOD NAME!! id="foodName" -->
-
 						<div class="rnamecontain" >
 							<p id="foodName"> 
 								<p>
@@ -103,8 +101,6 @@
 										<div class="rstepnumber">
 											<p> 1 </p>
 										</div>
-                                                                     <!-- FIREBASE!!!!! STEP 1!! id="step1" -->
-
 										<div class="rstepinstruction" id="step1">
                         "In a saucepan bring water to a boil. Add rice and stir. Reduce heat, cover and simmer for 20 minutes. Meanwhile, slice beef into very thin strips."
                       </div>
@@ -113,8 +109,6 @@
 										<div class="rstepnumber">
 											<p> 2 </p>
 										</div>
-                                                                     <!-- FIREBASE!!!!! STEP 2!! id="step2" -->
-                    
 										<div class="rstepinstruction" id="step2">
 "In a mixing bowl, combine the cornstarch, broth, soy sauce, sugar and garlic powder. Mix thoroughly."
                       </div>
@@ -123,8 +117,6 @@
 										<div class="rstepnumber">
 											<p> 3 </p>
 										</div>
-                                                                      <!-- FIREBASE!!!!! STEP 3!! id="step3" -->
-
 										<div class="rstepinstruction" id="step3">
 "In a large skillet, over medium/high heat, saute the beef strips until browned and juices evaporate." 
                      </div>
@@ -133,8 +125,7 @@
 										<div class="rstepnumber">
 											<p> 4 </p>
 										</div>
-                                                                      <!-- FIREBASE!!!!! STEP 4!! id="step4" -->
-                    
+                                                
 										<div class="rstepinstruction" id="step4">
 "(Optional) Stir broccoli and cornstarch mixture into meat. Cook until mixture boils and thickens, stirring frequently. Serve over the cooked rice."
                       </div>
@@ -145,34 +136,34 @@
 					</div>
 				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 				</script>
-				<script>
-					$(document).ready(function() {
-						var queryString = decodeURIComponent(window.location.search);
-						var recipe = queryString.split("?");
-						var grabRecipe = firebase.database().ref("Recipes/" + recipe[1]);
-						grabRecipe.on(
-							"value",
-								      function(snap) {
-								      	$("#foodName").text(snap.key.replace(/_/g, " "));
-								      	$("#step1").text(snap.val().Step_One);
-								      	$("#step2").text(snap.val().Step_Two);
-								      	$("#step3").text(snap.val().Step_Three);
-								      	$("#step4").text(snap.val().Step_Four);
-								      	$("#prepTime").text(snap.val().Prep_Time + " minutes");
-								      	$("#cookTime").text(snap.val().Cook_Time + " minutes");
-								      	$("#imageUrl").attr('src', snap.val().Picture);
-								      	console.log(snap.key);
-								      	var ref = firebase.database().ref("Recipes/" + snap.key + "/Ingredients");
-														ref.on(
-															"value",
-															function(snap2) {
-																snap2.forEach(function(snap3){
-																	var ing = $("<li>" + snap3.key + "</li>");
-							      							$("#list").append(ing);
-																})
-															}) 	
-						})
-					});	      
-				</script>	
-				</body>
-			</html>
+<script>
+    $(document).ready(function() {
+        var queryString = decodeURIComponent(window.location.search);
+        var recipe = queryString.split("?");
+        var grabRecipe = firebase.database().ref("Recipes/" + recipe[1]);
+        grabRecipe.on(
+            "value",
+            function(snap) {
+                $("#foodName").text(snap.key.replace(/_/g, " "));
+                $("#step1").text(snap.val().Step_One);
+                $("#step2").text(snap.val().Step_Two);
+                $("#step3").text(snap.val().Step_Three);
+                $("#step4").text(snap.val().Step_Four);
+                $("#prepTime").text(snap.val().Prep_Time + " minutes");
+                $("#cookTime").text(snap.val().Cook_Time + " minutes");
+                $("#imageUrl").attr('src', snap.val().Picture);
+                console.log(snap.key);
+                var ref = firebase.database().ref("Recipes/" + snap.key + "/Ingredients");
+                ref.on(
+                    "value",
+                    function(snap2) {
+                        snap2.forEach(function(snap3) {
+                            var ing = $("<li>" + snap3.key + "</li>");
+                            $("#list").append(ing);
+                        })
+                    })
+            })
+    });
+  </script>	
+  </body>
+</html>
