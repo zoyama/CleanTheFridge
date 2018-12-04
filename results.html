@@ -26,7 +26,7 @@
 			<body>
 				<div class="banner-whole">
 	        <div class="banner">
- <a href="index.html"> 
+						<a href="index.html"> 
 
             <div class="logo">
                 <img src="picture/logo.png">
@@ -56,6 +56,7 @@
     		</div>
 				<div id="container1">
 					<section>
+						//Displays selected ingredient
 						<h4 id="ingre"> Selected Ingredient: </h4>
 						<ul>
 							<li id="select">  </li>
@@ -75,6 +76,7 @@
 							    search.on(
 							      "value",
 							      function(snap) {
+											// snapshot = name of Recipe
 							        snap.forEach(function(snapshot) {
 							        	console.log(snapshot.key);
 													var ref = firebase.database().ref("Recipes/" + snapshot.key);
@@ -83,12 +85,14 @@
 															function(snap2) {
 																var name = snapshot.key.replace(/_/g, " ");
 										var i;
+										//Ingredients of recipe (snap2)
 										for (var key in snap2.val().Ingredients){
 											i += key.replace(/_/g, " ") + "<br>";
 										};
+										
 										/*
 										*
-										*ELEMENTS CREATED
+										*HTML ELEMENTS CREATED
 										*
 										*/
 										var container = $("<div></div>");
@@ -103,7 +107,7 @@
 										$("#select").text(ingredientList[1].replace(/_/g, " "));						
 										/**
 										*
-										*snap2S INTO ELEMENTS
+										*snap2 values INTO ELEMENTS
 										*
 										*/
 										$(ingred).html(i.substring(9));
@@ -112,7 +116,7 @@
 											+ " mins<br>" + "Cook Time: " + snap2.val().Cook_Time + " mins<br>");
 										/**
 										*
-										*CSS CHANGES
+										*ADD CLASSES to NEW HTML ELEMENTS
 										*
 										*/								
 										$(container).addClass("container2");
@@ -121,7 +125,7 @@
 										$(box4).addClass("ingredients");
 										$(img).addClass("image");
 										/**
-										*APPENDS
+										*APPEND NEWLY CREATED HTML ELEMENTS INTO BODY.
 										*
 										*/
 										$(body).append(container);
@@ -137,6 +141,7 @@
 															})
 														})
 						        	})
+									//Saves recipe selected for recipeinfo page.
 							    var query = prevID.substring(1); 
       						window.location.href = "recipeinfo.html?" + query;
 						  		});  
