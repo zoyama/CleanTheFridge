@@ -138,12 +138,15 @@
 				</script>
 <script>
     $(document).ready(function() {
+				//Grab recipe from url
         var queryString = decodeURIComponent(window.location.search);
         var recipe = queryString.split("?");
+				//Go into database and grab relevant info.
         var grabRecipe = firebase.database().ref("Recipes/" + recipe[1]);
         grabRecipe.on(
             "value",
             function(snap) {
+								//Insert values into existing HTML divs
                 $("#foodName").text(snap.key.replace(/_/g, " "));
                 $("#step1").text(snap.val().Step_One);
                 $("#step2").text(snap.val().Step_Two);
