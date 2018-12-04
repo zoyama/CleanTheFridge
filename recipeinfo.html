@@ -161,7 +161,7 @@
                     "value",
                     function(snap2) {
                         snap2.forEach(function(snap3) {
-                            var ing = $("<li>" + snap3.key + "</li>");
+                            var ing = $("<li>" + snap3.key.replace(/_/g, " ") + "</li>");
                             $("#list").append(ing);
                         })
                     })
